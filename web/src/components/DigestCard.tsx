@@ -37,8 +37,9 @@ export default function DigestCard({ item }: { item: DigestItem }) {
       </div>
       <div className="mt-2 flex items-center gap-4 text-xs text-text-dim">
         <span className={sourceColor}>{item.source}</span>
-        <span>+{item.upvotes}</span>
-        <span>{item.comments} comments</span>
+        {item.upvotes > 0 && <span>+{item.upvotes}</span>}
+        {item.comments > 0 && <span>{item.comments} comments</span>}
+        {item.cvss && item.cvss > 0 && <span>CVSS {item.cvss}</span>}
         <span className="ml-auto text-[10px]">
           score {Math.round(item.score)}
         </span>

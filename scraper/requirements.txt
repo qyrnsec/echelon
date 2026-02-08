@@ -1,4 +1,3 @@
-praw
 feedparser
 twikit
 python-dotenv
