@@ -3,10 +3,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-TWITTER_USERNAME = os.getenv("TWITTER_USERNAME", "")
-TWITTER_EMAIL = os.getenv("TWITTER_EMAIL", "")
-TWITTER_PASSWORD = os.getenv("TWITTER_PASSWORD", "")
-
 NVD_API_KEY = os.getenv("NVD_API_KEY", "")
 
 SUBREDDITS = [
@@ -40,6 +36,14 @@ RSS_FEEDS = {
     "SANS ISC": "https://isc.sans.edu/rssfeed.xml",
 }
 
+PODCAST_FEEDS = {
+    "Darknet Diaries": "https://feeds.megaphone.fm/darknetdiaries",
+    "Risky Business": "https://risky.biz/feeds/risky-business/",
+    "Security Now": "https://feeds.twit.tv/sn.xml",
+    "Malicious Life": "https://malicious.life/feed/podcast/",
+    "SANS Internet Stormcast": "https://isc.sans.edu/podcast.xml",
+}
+
 YOUTUBE_CHANNELS = {
     "John Hammond": "UCVeW9qkBjo3zosnqUbG7CFw",
     "LiveOverflow": "UClcE-kVhqyiHCcjYwcpfj9w",
@@ -56,16 +60,6 @@ YOUTUBE_CHANNELS = {
 NVD_RESULTS_PER_PAGE = 30
 NVD_DAYS_BACK = 7
 
-TWITTER_ACCOUNTS = [
-    "SwiftOnSecurity",
-    "malaboromann",
-    "GossiTheDog",
-    "campuscodi",
-    "vabornh",
-    "troabornh",
-    "brabornh",
-]
-
 DIGEST_TOP_N = 25
 DIGEST_OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "digests")
 
@@ -74,7 +68,7 @@ CATEGORY_KEYWORDS = {
         "cve", "vulnerability", "exploit", "zero-day", "0day", "rce",
         "xss", "sqli", "sql injection", "privilege escalation", "buffer overflow",
         "use-after-free", "heap overflow", "poc", "proof of concept",
-        "patch", "advisory", "critical vulnerability",
+        "patch", "advisory", "critical vulnerability", "ghsa",
     ],
     "Tools": [
         "tool", "framework", "release", "github", "scanner", "pentest",

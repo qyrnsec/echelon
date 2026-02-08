@@ -1,4 +1,3 @@
 feedparser
-twikit
 python-dotenv
 requests

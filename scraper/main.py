@@ -1,7 +1,8 @@
 from scraper.sources.reddit import fetch_reddit
 from scraper.sources.rss import fetch_rss
-from scraper.sources.twitter import fetch_twitter
 from scraper.sources.youtube import fetch_youtube
+from scraper.sources.podcast import fetch_podcasts
+from scraper.sources.github import fetch_github
 from scraper.sources.nvd import fetch_nvd
 from scraper.scoring import rank_items
 from scraper.categorizer import categorize_items
@@ -13,19 +14,22 @@ def run():
 
     all_items = []
 
-    print("[1/5] Reddit...")
+    print("[1/6] Reddit...")
     all_items.extend(fetch_reddit())
 
-    print("[2/5] RSS...")
+    print("[2/6] RSS...")
     all_items.extend(fetch_rss())
 
-    print("[3/5] Twitter...")
-    all_items.extend(fetch_twitter())
+    print("[3/6] Podcasts...")
+    all_items.extend(fetch_podcasts())
 
-    print("[4/5] YouTube...")
+    print("[4/6] YouTube...")
     all_items.extend(fetch_youtube())
 
-    print("[5/5] NVD...")
+    print("[5/6] GitHub Advisories...")
+    all_items.extend(fetch_github())
+
+    print("[6/6] NVD...")
     all_items.extend(fetch_nvd())
 
     print(f"\nTotal brut : {len(all_items)} éléments\n")
