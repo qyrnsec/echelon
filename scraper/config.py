@@ -12,11 +12,9 @@ NVD_API_KEY = os.getenv("NVD_API_KEY", "")
 SUBREDDITS = [
     "netsec",
     "cybersecurity",
-    "AskNetsec",
     "ReverseEngineering",
     "Malware",
     "bugbounty",
-    "hacking",
 ]
 
 RSS_FEEDS = {
@@ -28,10 +26,18 @@ RSS_FEEDS = {
     "CISA Alerts": "https://www.cisa.gov/cybersecurity-advisories/all.xml",
     "SecurityWeek": "https://www.securityweek.com/feed/",
     "The Record": "https://therecord.media/feed",
-    "Ars Technica Security": "https://feeds.arstechnica.com/arstechnica/security",
     "Exploit-DB": "https://www.exploit-db.com/rss.xml",
-    "Packet Storm": "https://packetstormsecurity.com/feeds/",
-    "HackerOne Hacktivity": "https://hackerone.com/hacktivity.json",
+    "Google Project Zero": "https://googleprojectzero.blogspot.com/feeds/posts/default",
+    "PortSwigger Research": "https://portswigger.net/research/rss",
+    "Qualys Blog": "https://blog.qualys.com/feed",
+    "Mandiant Blog": "https://www.mandiant.com/resources/blog/rss.xml",
+    "SentinelOne": "https://www.sentinelone.com/blog/feed/",
+    "Threatpost": "https://threatpost.com/feed/",
+    "Unit42 Palo Alto": "https://unit42.paloaltonetworks.com/feed/",
+    "WeLiveSecurity (ESET)": "https://www.welivesecurity.com/feed/",
+    "Talos Intelligence": "https://blog.talosintelligence.com/rss/",
+    "CrowdStrike Blog": "https://www.crowdstrike.com/blog/feed/",
+    "SANS ISC": "https://isc.sans.edu/rssfeed.xml",
 }
 
 YOUTUBE_CHANNELS = {
@@ -60,7 +66,7 @@ TWITTER_ACCOUNTS = [
     "brabornh",
 ]
 
-DIGEST_TOP_N = 20
+DIGEST_TOP_N = 25
 DIGEST_OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "digests")
 
 CATEGORY_KEYWORDS = {
