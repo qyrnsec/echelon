@@ -25,7 +25,7 @@ export default async function DigestPage({
     grouped[cat].push(item);
   }
 
-  const categoryOrder = ["Vulns", "Tools", "Tutorials", "News"];
+  const categoryOrder = ["Vulns", "Bounty", "Tools", "Tutorials", "News"];
 
   return (
     <div>
