@@ -1,7 +1,7 @@
 {
   "date": "2026-02-08",
-  "generated_at": "2026-02-08T04:36:50.630749+00:00",
-  "count": 19,
+  "generated_at": "2026-02-08T05:03:22.061368+00:00",
+  "count": 23,
   "items": [
     {
       "title": "Advanced Web Shell Detection and Prevention: A Deep Dive into CrowdStrike's Linux Sensor Capabilities",
@@ -10,8 +10,8 @@
       "source_type": "rss",
       "upvotes": 0,
       "comments": 0,
-      "created_utc": 1770525404.0070286,
-      "score": 544325.0001595177,
+      "created_utc": 1770526994.7264931,
+      "score": 491905.9187678458,
       "category": "News"
     },
     {
@@ -21,9 +21,57 @@
       "source_type": "rss",
       "upvotes": 0,
       "comments": 0,
-      "created_utc": 1770525404.0070286,
-      "score": 544325.0001595177,
+      "created_utc": 1770526994.7264931,
+      "score": 491905.9187678458,
       "category": "News"
+    },
+    {
+      "title": "[CRITICAL] CVE-2026-1709 — Keylime Missing Authentication for Critical Function and Improper Authentication",
+      "url": "https://github.com/advisories/GHSA-4jqp-9qjv-57m2",
+      "source": "GitHub Advisory",
+      "source_type": "github",
+      "upvotes": 0,
+      "comments": 0,
+      "severity": "critical",
+      "severity_score": 10,
+      "created_utc": 1770417284.0,
+      "score": 800,
+      "category": "Vulns"
+    },
+    {
+      "title": "[CRITICAL] GHSA-27jc-jmp8-qfw5 — Duplicate Advisory: Keylime Missing Authentication for Critical Function and Improper Authentication",
+      "url": "https://github.com/advisories/GHSA-27jc-jmp8-qfw5",
+      "source": "GitHub Advisory",
+      "source_type": "github",
+      "upvotes": 0,
+      "comments": 0,
+      "severity": "critical",
+      "severity_score": 10,
+      "created_utc": 1770413449.0,
+      "score": 800,
+      "category": "Vulns"
+    },
+    {
+      "title": "Stuck in the process as a beginner (API Pentest).",
+      "url": "https://www.reddit.com/r/bugbounty/comments/1qyzqv0/stuck_in_the_process_as_a_beginner_api_pentest/",
+      "source": "r/bugbounty",
+      "source_type": "reddit",
+      "upvotes": 0,
+      "comments": 0,
+      "created_utc": 1770522520.0,
+      "score": 160.64095864787475,
+      "category": "Tools"
+    },
+    {
+      "title": "Looking for 2 people to help me with bug bounty",
+      "url": "https://www.reddit.com/r/bugbounty/comments/1qyyd6c/looking_for_2_people_to_help_me_with_bug_bounty/",
+      "source": "r/bugbounty",
+      "source_type": "reddit",
+      "upvotes": 0,
+      "comments": 0,
+      "created_utc": 1770518353.0,
+      "score": 83.24618531313916,
+      "category": "Bounty"
     },
     {
       "title": "State actor targets 155 countries in 'Shadow Campaigns' espionage op",
@@ -33,7 +81,18 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770473386.0,
-      "score": 69.19800567251087,
+      "score": 67.14407976754136,
+      "category": "News"
+    },
+    {
+      "title": "Table of 2FA strength",
+      "url": "https://www.reddit.com/r/cybersecurity/comments/1qyxd9t/table_of_2fa_strength/",
+      "source": "r/cybersecurity",
+      "source_type": "reddit",
+      "upvotes": 0,
+      "comments": 0,
+      "created_utc": 1770515515.0,
+      "score": 62.67930543905253,
       "category": "News"
     },
     {
@@ -44,7 +103,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770465600.0,
-      "score": 60.18997891003294,
+      "score": 58.62996911598672,
       "category": "News"
     },
     {
@@ -55,7 +114,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770459300.0,
-      "score": 54.454185432707035,
+      "score": 53.17416928575101,
       "category": "News"
     },
     {
@@ -66,7 +125,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770454030.0,
-      "score": 50.43385674520221,
+      "score": 49.333960720026184,
       "category": "News"
     },
     {
@@ -77,7 +136,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770472860.0,
-      "score": 34.25268769780444,
+      "score": 33.245881295005944,
       "category": "News"
     },
     {
@@ -88,7 +147,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770415202.0,
-      "score": 32.66532124561534,
+      "score": 32.20034483083665,
       "category": "News"
     },
     {
@@ -99,7 +158,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770411665.0,
-      "score": 31.64957012913374,
+      "score": 31.212868346585676,
       "category": "News"
     },
     {
@@ -110,7 +169,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770409619.0,
-      "score": 31.090332594681126,
+      "score": 30.668824454593,
       "category": "News"
     },
     {
@@ -121,7 +180,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770407032.0,
-      "score": 30.410896646447995,
+      "score": 30.007490628414253,
       "category": "News"
     },
     {
@@ -132,7 +191,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770392688.0,
-      "score": 27.124238357788048,
+      "score": 26.80285595537055,
       "category": "News"
     },
     {
@@ -143,29 +202,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770392081.0,
-      "score": 27.0007518242352,
-      "category": "News"
-    },
-    {
-      "title": "Shai-hulud: The Hidden Cost of Supply Chain Attacks",
-      "url": "https://www.darkreading.com/application-security/shai-hulud-hidden-cost-supply-chain-attacks",
-      "source": "Dark Reading",
-      "source_type": "rss",
-      "upvotes": 0,
-      "comments": 0,
-      "created_utc": 1770391514.0,
-      "score": 26.886414164318836,
-      "category": "News"
-    },
-    {
-      "title": "China-Linked DKnife AitM Framework Targets Routers for Traffic Hijacking, Malware Delivery",
-      "url": "https://thehackernews.com/2026/02/china-linked-dknife-aitm-framework.html",
-      "source": "The Hacker News",
-      "source_type": "rss",
-      "upvotes": 0,
-      "comments": 0,
-      "created_utc": 1770386160.0,
-      "score": 25.85266752328502,
+      "score": 26.682271849540058,
       "category": "News"
     },
     {
@@ -176,7 +213,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770400471.0,
-      "score": 14.406959054005672,
+      "score": 14.225757801078124,
       "category": "News"
     },
     {
@@ -187,30 +224,41 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770372027.0,
-      "score": 11.735281717164433,
+      "score": 11.614773206859695,
       "category": "News"
     },
     {
-      "title": "The Payload Podcast #001 with Jonny Johnson & Max Harley",
-      "url": "https://www.youtube.com/watch?v=U0l2ssRslm0",
-      "source": "John Hammond",
-      "source_type": "youtube",
+      "title": "SN 1063: Mongo's Too Easy - AI Bug Bounties Gone Wild",
+      "url": "https://twit.tv/shows/security-now/episodes/1063",
+      "source": "Security Now",
+      "source_type": "podcast",
       "upvotes": 0,
       "comments": 0,
-      "created_utc": 1770347176.0,
-      "score": 10.09904805634197,
+      "created_utc": 1770175747.0,
+      "score": 6.1493778693218575,
       "category": "News"
     },
     {
-      "title": "Network Basics - Transport Layer and User Datagram Protocol Explained - Computerphile",
-      "url": "https://www.youtube.com/watch?v=ihvbhwGblQg",
-      "source": "NetworkChuck",
-      "source_type": "youtube",
+      "title": "Risky Business #823 -- Humans impersonate clawdbots impersonating humans",
+      "url": "https://risky.biz/RB823/",
+      "source": "Risky Business",
+      "source_type": "podcast",
       "upvotes": 0,
       "comments": 0,
-      "created_utc": 1770296473.0,
-      "score": 7.862403716366769,
-      "category": "Tutorials"
+      "created_utc": 1770171234.0,
+      "score": 6.071371587653357,
+      "category": "News"
+    },
+    {
+      "title": "170: Phrack",
+      "url": "https://darknetdiaries.com/episode/170/",
+      "source": "Darknet Diaries",
+      "source_type": "podcast",
+      "upvotes": 0,
+      "comments": 0,
+      "created_utc": 1770102000.0,
+      "score": 5.082328486617283,
+      "category": "News"
     }
   ]
 }

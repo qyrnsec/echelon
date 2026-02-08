@@ -16,14 +16,21 @@ def score_item(item):
             age_hours = 1
         return max(0, 1000 / age_hours)
 
-    if source_type == "twitter":
-        return item.get("upvotes", 0) + item.get("retweets", 0) * 3
+    if source_type == "podcast":
+        age_hours = (time.time() - item.get("created_utc", 0)) / 3600
+        if age_hours <= 0:
+            age_hours = 1
+        return max(0, 600 / age_hours)
 
     if source_type == "youtube":
         age_hours = (time.time() - item.get("created_utc", 0)) / 3600
         if age_hours <= 0:
             age_hours = 1
         return max(0, 500 / age_hours)
+
+    if source_type == "github":
+        severity_score = item.get("severity_score", 0)
+        return severity_score * 80
 
     if source_type == "nvd":
         cvss = item.get("cvss", 0)

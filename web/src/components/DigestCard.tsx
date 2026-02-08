@@ -3,8 +3,9 @@ import type { DigestItem } from "@/lib/types";
 const SOURCE_COLORS: Record<string, string> = {
   reddit: "text-orange",
   rss: "text-cyan",
-  twitter: "text-purple",
+  podcast: "text-purple",
   youtube: "text-red",
+  github: "text-accent",
   nvd: "text-orange",
 };
 

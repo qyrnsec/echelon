@@ -4,11 +4,12 @@ from datetime import datetime, timezone
 from scraper.config import DIGEST_TOP_N, DIGEST_OUTPUT_DIR
 
 MAX_PER_SOURCE_TYPE = {
-    "rss": 14,
-    "youtube": 5,
-    "reddit": 4,
+    "rss": 12,
+    "github": 4,
     "nvd": 4,
-    "twitter": 3,
+    "youtube": 3,
+    "podcast": 3,
+    "reddit": 3,
 }
 DEFAULT_MAX = 3
 MAX_PER_SOURCE = 2
