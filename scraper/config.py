@@ -3,10 +3,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-REDDIT_CLIENT_ID = os.getenv("REDDIT_CLIENT_ID", "")
-REDDIT_CLIENT_SECRET = os.getenv("REDDIT_CLIENT_SECRET", "")
-REDDIT_USER_AGENT = os.getenv("REDDIT_USER_AGENT", "echelon:v1.0")
-
 TWITTER_USERNAME = os.getenv("TWITTER_USERNAME", "")
 TWITTER_EMAIL = os.getenv("TWITTER_EMAIL", "")
 TWITTER_PASSWORD = os.getenv("TWITTER_PASSWORD", "")
@@ -22,7 +18,6 @@ SUBREDDITS = [
     "bugbounty",
     "hacking",
 ]
-REDDIT_POSTS_PER_SUB = 50
 
 RSS_FEEDS = {
     "Krebs on Security": "https://krebsonsecurity.com/feed/",

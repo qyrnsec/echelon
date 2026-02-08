@@ -1,41 +1,31 @@
-import praw
-from scraper.config import (
-    REDDIT_CLIENT_ID,
-    REDDIT_CLIENT_SECRET,
-    REDDIT_USER_AGENT,
-    SUBREDDITS,
-    REDDIT_POSTS_PER_SUB,
-)
+import time
+import feedparser
+from scraper.config import SUBREDDITS
 
 
 def fetch_reddit():
-    if not REDDIT_CLIENT_ID or not REDDIT_CLIENT_SECRET:
-        print("[Reddit] Identifiants manquants, source ignorée.")
-        return []
-
-    reddit = praw.Reddit(
-        client_id=REDDIT_CLIENT_ID,
-        client_secret=REDDIT_CLIENT_SECRET,
-        user_agent=REDDIT_USER_AGENT,
-    )
-
     items = []
+
     for sub_name in SUBREDDITS:
         try:
-            subreddit = reddit.subreddit(sub_name)
-            for post in subreddit.hot(limit=REDDIT_POSTS_PER_SUB):
-                if post.stickied:
-                    continue
+            url = f"https://www.reddit.com/r/{sub_name}/hot.rss?limit=50"
+            feed = feedparser.parse(url)
+            count = 0
+            for entry in feed.entries:
+                published = entry.get("published_parsed") or entry.get("updated_parsed")
+                created_utc = time.mktime(published) if published else time.time()
+
                 items.append({
-                    "title": post.title,
-                    "url": post.url,
+                    "title": entry.get("title", ""),
+                    "url": entry.get("link", ""),
                     "source": f"r/{sub_name}",
                     "source_type": "reddit",
-                    "upvotes": post.score,
-                    "comments": post.num_comments,
-                    "created_utc": post.created_utc,
+                    "upvotes": 0,
+                    "comments": 0,
+                    "created_utc": created_utc,
                 })
-            print(f"[Reddit] r/{sub_name} : {len([i for i in items if i['source'] == f'r/{sub_name}'])} posts récupérés")
+                count += 1
+            print(f"[Reddit] r/{sub_name} : {count} posts récupérés")
         except Exception as e:
             print(f"[Reddit] Erreur sur r/{sub_name} : {e}")
 
