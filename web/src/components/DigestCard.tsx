@@ -4,12 +4,15 @@ const SOURCE_COLORS: Record<string, string> = {
   reddit: "text-orange",
   rss: "text-cyan",
   twitter: "text-purple",
+  youtube: "text-red",
+  nvd: "text-orange",
 };
 
 const CATEGORY_COLORS: Record<string, string> = {
   Vulns: "border-red bg-red/10 text-red",
   Tools: "border-accent bg-accent/10 text-accent",
   Tutorials: "border-purple bg-purple/10 text-purple",
+  Bounty: "border-orange bg-orange/10 text-orange",
   News: "border-cyan bg-cyan/10 text-cyan",
 };
 

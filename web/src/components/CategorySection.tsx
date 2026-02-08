@@ -5,6 +5,7 @@ const CATEGORY_ICONS: Record<string, string> = {
   Vulns: "!",
   Tools: ">",
   Tutorials: "?",
+  Bounty: "$",
   News: "#",
 };
 
