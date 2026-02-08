@@ -1,73 +1,29 @@
 {
   "date": "2026-02-08",
-  "generated_at": "2026-02-08T04:24:37.910114+00:00",
-  "count": 18,
+  "generated_at": "2026-02-08T04:36:50.630749+00:00",
+  "count": 19,
   "items": [
     {
-      "title": "Looking for 2 people to help me with bug bounty",
-      "url": "https://www.reddit.com/r/bugbounty/comments/1qyyd6c/looking_for_2_people_to_help_me_with_bug_bounty/",
-      "source": "r/bugbounty",
-      "source_type": "reddit",
+      "title": "Advanced Web Shell Detection and Prevention: A Deep Dive into CrowdStrike's Linux Sensor Capabilities",
+      "url": "https://www.crowdstrike.com/en-us/blog/advanced-web-shell-detection-and-prevention/",
+      "source": "CrowdStrike Blog",
+      "source_type": "rss",
       "upvotes": 0,
       "comments": 0,
-      "created_utc": 1770518353.0,
-      "score": 227.67158214932687,
-      "category": "Bounty"
-    },
-    {
-      "title": "Table of 2FA strength",
-      "url": "https://www.reddit.com/r/cybersecurity/comments/1qyxd9t/table_of_2fa_strength/",
-      "source": "r/cybersecurity",
-      "source_type": "reddit",
-      "upvotes": 0,
-      "comments": 0,
-      "created_utc": 1770515515.0,
-      "score": 157.15548495053824,
+      "created_utc": 1770525404.0070286,
+      "score": 544325.0001595177,
       "category": "News"
     },
     {
-      "title": "App Security/ Blue Team",
-      "url": "https://www.reddit.com/r/cybersecurity/comments/1qyw9q9/app_security_blue_team/",
-      "source": "r/cybersecurity",
-      "source_type": "reddit",
+      "title": "What Security Teams Need to Know About OpenClaw, the AI Super Agent",
+      "url": "https://www.crowdstrike.com/en-us/blog/what-security-teams-need-to-know-about-openclaw-ai-super-agent/",
+      "source": "CrowdStrike Blog",
+      "source_type": "rss",
       "upvotes": 0,
       "comments": 0,
-      "created_utc": 1770512445.0,
-      "score": 117.71534099000661,
+      "created_utc": 1770525404.0070286,
+      "score": 544325.0001595177,
       "category": "News"
-    },
-    {
-      "title": "Don't seem right",
-      "url": "https://www.reddit.com/r/bugbounty/comments/1qyw3h0/dont_seem_right/",
-      "source": "r/bugbounty",
-      "source_type": "reddit",
-      "upvotes": 0,
-      "comments": 0,
-      "created_utc": 1770511974.0,
-      "score": 113.35101779686295,
-      "category": "Bounty"
-    },
-    {
-      "title": "Which WiFi adapter is best for WiFi pentesting and auditing?",
-      "url": "https://www.reddit.com/r/cybersecurity/comments/1qyvdk1/which_wifi_adapter_is_best_for_wifi_pentesting/",
-      "source": "r/cybersecurity",
-      "source_type": "reddit",
-      "upvotes": 0,
-      "comments": 0,
-      "created_utc": 1770509980.0,
-      "score": 97.97317954737144,
-      "category": "Tools"
-    },
-    {
-      "title": "Open source hardened container images - a solution",
-      "url": "https://www.reddit.com/r/cybersecurity/comments/1qyvboa/open_source_hardened_container_images_a_solution/",
-      "source": "r/cybersecurity",
-      "source_type": "reddit",
-      "upvotes": 0,
-      "comments": 0,
-      "created_utc": 1770509830.0,
-      "score": 96.98341150688388,
-      "category": "Vulns"
     },
     {
       "title": "State actor targets 155 countries in 'Shadow Campaigns' espionage op",
@@ -77,7 +33,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770473386.0,
-      "score": 70.18652061821767,
+      "score": 69.19800567251087,
       "category": "News"
     },
     {
@@ -88,29 +44,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770465600.0,
-      "score": 60.93649228064024,
-      "category": "News"
-    },
-    {
-      "title": "HackTheBox - Signed",
-      "url": "https://www.youtube.com/watch?v=d7FCnR6YS_E",
-      "source": "IppSec",
-      "source_type": "youtube",
-      "upvotes": 0,
-      "comments": 0,
-      "created_utc": 1770472860.0,
-      "score": 55.57924959412175,
-      "category": "News"
-    },
-    {
-      "title": "Bundle Up With Our Biggest Discounts Ever!",
-      "url": "https://www.youtube.com/shorts/IlxBoX7hpzk",
-      "source": "The Cyber Mentor",
-      "source_type": "youtube",
-      "upvotes": 0,
-      "comments": 0,
-      "created_utc": 1770472800.0,
-      "score": 55.51496875444231,
+      "score": 60.18997891003294,
       "category": "News"
     },
     {
@@ -121,7 +55,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770459300.0,
-      "score": 55.06447893808146,
+      "score": 54.454185432707035,
       "category": "News"
     },
     {
@@ -132,18 +66,29 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770454030.0,
-      "score": 50.956928624170864,
+      "score": 50.43385674520221,
       "category": "News"
     },
     {
-      "title": "Why humans are still necessary in the technical writing and research process",
-      "url": "https://www.youtube.com/shorts/56Hv0LDjtWM",
-      "source": "David Bombal",
+      "title": "HackTheBox - Signed",
+      "url": "https://www.youtube.com/watch?v=d7FCnR6YS_E",
+      "source": "IppSec",
       "source_type": "youtube",
       "upvotes": 0,
       "comments": 0,
-      "created_utc": 1770467539.0,
-      "score": 50.40349040272081,
+      "created_utc": 1770472860.0,
+      "score": 34.25268769780444,
+      "category": "News"
+    },
+    {
+      "title": "Novel Technique to Detect Cloud Threat Actor Operations",
+      "url": "https://unit42.paloaltonetworks.com/tracking-threat-groups-through-cloud-logging/",
+      "source": "Unit42 Palo Alto",
+      "source_type": "rss",
+      "upvotes": 0,
+      "comments": 0,
+      "created_utc": 1770415202.0,
+      "score": 32.66532124561534,
       "category": "News"
     },
     {
@@ -154,7 +99,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770411665.0,
-      "score": 31.85477054913138,
+      "score": 31.64957012913374,
       "category": "News"
     },
     {
@@ -165,7 +110,62 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770409619.0,
-      "score": 31.28832275136446,
+      "score": 31.090332594681126,
+      "category": "News"
+    },
+    {
+      "title": "I Am in the Epstein Files",
+      "url": "https://www.schneier.com/blog/archives/2026/02/i-am-in-the-epstein-files.html",
+      "source": "Schneier on Security",
+      "source_type": "rss",
+      "upvotes": 0,
+      "comments": 0,
+      "created_utc": 1770407032.0,
+      "score": 30.410896646447995,
+      "category": "News"
+    },
+    {
+      "title": "EU threatens TikTok with massive fine over addictive design features",
+      "url": "https://therecord.media/eu-threatens-tiktok-with-fine-over-addictive-features",
+      "source": "The Record",
+      "source_type": "rss",
+      "upvotes": 0,
+      "comments": 0,
+      "created_utc": 1770392688.0,
+      "score": 27.124238357788048,
+      "category": "News"
+    },
+    {
+      "title": "'Encrypt It Already' Campaign Pushes Big Tech to Prioritize E2E Encryption",
+      "url": "https://www.darkreading.com/cloud-security/encrypt-it-already-pushes-big-tech-e2e-encryption",
+      "source": "Dark Reading",
+      "source_type": "rss",
+      "upvotes": 0,
+      "comments": 0,
+      "created_utc": 1770392081.0,
+      "score": 27.0007518242352,
+      "category": "News"
+    },
+    {
+      "title": "Shai-hulud: The Hidden Cost of Supply Chain Attacks",
+      "url": "https://www.darkreading.com/application-security/shai-hulud-hidden-cost-supply-chain-attacks",
+      "source": "Dark Reading",
+      "source_type": "rss",
+      "upvotes": 0,
+      "comments": 0,
+      "created_utc": 1770391514.0,
+      "score": 26.886414164318836,
+      "category": "News"
+    },
+    {
+      "title": "China-Linked DKnife AitM Framework Targets Routers for Traffic Hijacking, Malware Delivery",
+      "url": "https://thehackernews.com/2026/02/china-linked-dknife-aitm-framework.html",
+      "source": "The Hacker News",
+      "source_type": "rss",
+      "upvotes": 0,
+      "comments": 0,
+      "created_utc": 1770386160.0,
+      "score": 25.85266752328502,
       "category": "News"
     },
     {
@@ -176,18 +176,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770400471.0,
-      "score": 23.187117615648283,
-      "category": "News"
-    },
-    {
-      "title": "\"This is what people mean by focus, ok!\" - Abbey, after being diagnosed with ADHD at 28",
-      "url": "https://www.youtube.com/shorts/WbZDt-ubm48",
-      "source": "David Bombal",
-      "source_type": "youtube",
-      "upvotes": 0,
-      "comments": 0,
-      "created_utc": 1770380306.0,
-      "score": 19.948480272949386,
+      "score": 14.406959054005672,
       "category": "News"
     },
     {
@@ -198,8 +187,30 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770372027.0,
-      "score": 18.866577263324647,
+      "score": 11.735281717164433,
       "category": "News"
+    },
+    {
+      "title": "The Payload Podcast #001 with Jonny Johnson & Max Harley",
+      "url": "https://www.youtube.com/watch?v=U0l2ssRslm0",
+      "source": "John Hammond",
+      "source_type": "youtube",
+      "upvotes": 0,
+      "comments": 0,
+      "created_utc": 1770347176.0,
+      "score": 10.09904805634197,
+      "category": "News"
+    },
+    {
+      "title": "Network Basics - Transport Layer and User Datagram Protocol Explained - Computerphile",
+      "url": "https://www.youtube.com/watch?v=ihvbhwGblQg",
+      "source": "NetworkChuck",
+      "source_type": "youtube",
+      "upvotes": 0,
+      "comments": 0,
+      "created_utc": 1770296473.0,
+      "score": 7.862403716366769,
+      "category": "Tutorials"
     }
   ]
 }

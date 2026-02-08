@@ -3,20 +3,39 @@ import os
 from datetime import datetime, timezone
 from scraper.config import DIGEST_TOP_N, DIGEST_OUTPUT_DIR
 
-MAX_PER_SOURCE_TYPE = 6
+MAX_PER_SOURCE_TYPE = {
+    "rss": 14,
+    "youtube": 5,
+    "reddit": 4,
+    "nvd": 4,
+    "twitter": 3,
+}
+DEFAULT_MAX = 3
+MAX_PER_SOURCE = 2
 
 
 def generate_digest(items):
     selected = []
-    counts = {}
+    type_counts = {}
+    source_counts = {}
 
     for item in items:
         st = item.get("source_type", "")
-        counts.setdefault(st, 0)
-        if counts[st] >= MAX_PER_SOURCE_TYPE:
+        src = item.get("source", "")
+
+        type_limit = MAX_PER_SOURCE_TYPE.get(st, DEFAULT_MAX)
+        type_counts.setdefault(st, 0)
+        source_counts.setdefault(src, 0)
+
+        if type_counts[st] >= type_limit:
             continue
+        if source_counts[src] >= MAX_PER_SOURCE:
+            continue
+
         selected.append(item)
-        counts[st] += 1
+        type_counts[st] += 1
+        source_counts[src] += 1
+
         if len(selected) >= DIGEST_TOP_N:
             break
 

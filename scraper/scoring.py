@@ -8,7 +8,7 @@ def score_item(item):
         age_hours = (time.time() - item.get("created_utc", 0)) / 3600
         if age_hours <= 0:
             age_hours = 1
-        return max(0, 400 / age_hours)
+        return max(0, 200 / age_hours)
 
     if source_type == "rss":
         age_hours = (time.time() - item.get("created_utc", 0)) / 3600
@@ -23,7 +23,7 @@ def score_item(item):
         age_hours = (time.time() - item.get("created_utc", 0)) / 3600
         if age_hours <= 0:
             age_hours = 1
-        return max(0, 800 / age_hours)
+        return max(0, 500 / age_hours)
 
     if source_type == "nvd":
         cvss = item.get("cvss", 0)

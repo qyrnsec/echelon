@@ -12,11 +12,16 @@ def fetch_youtube():
             feed = feedparser.parse(url)
             count = 0
             for entry in feed.entries:
+                link = entry.get("link", "")
+                if "/shorts/" in link:
+                    continue
+
                 published = entry.get("published_parsed")
                 created_utc = time.mktime(published) if published else time.time()
 
                 video_id = entry.get("yt_videoid", "")
-                link = entry.get("link", f"https://www.youtube.com/watch?v={video_id}")
+                if not link:
+                    link = f"https://www.youtube.com/watch?v={video_id}"
 
                 items.append({
                     "title": entry.get("title", ""),
