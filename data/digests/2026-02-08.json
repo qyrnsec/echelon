@@ -1,6 +1,6 @@
 {
   "date": "2026-02-08",
-  "generated_at": "2026-02-08T10:00:43.835730+00:00",
+  "generated_at": "2026-02-08T10:42:44.895173+00:00",
   "count": 23,
   "items": [
     {
@@ -10,8 +10,8 @@
       "source_type": "rss",
       "upvotes": 0,
       "comments": 0,
-      "created_utc": 1770544835.9620779,
-      "score": 457627.776984395,
+      "created_utc": 1770547357.456035,
+      "score": 484453.1966928513,
       "category": "News"
     },
     {
@@ -21,8 +21,8 @@
       "source_type": "rss",
       "upvotes": 0,
       "comments": 0,
-      "created_utc": 1770544835.9620779,
-      "score": 457627.776984395,
+      "created_utc": 1770547357.456035,
+      "score": 484453.1966928513,
       "category": "News"
     },
     {
@@ -59,8 +59,19 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770532320.0,
-      "score": 287.45203058030705,
+      "score": 239.28394926950733,
       "category": "News"
+    },
+    {
+      "title": "Is anyone working on bug bounty as a side hustle or full-time?",
+      "url": "https://www.reddit.com/r/bugbounty/comments/1qz5qoc/is_anyone_working_on_bug_bounty_as_a_side_hustle/",
+      "source": "r/bugbounty",
+      "source_type": "reddit",
+      "upvotes": 0,
+      "comments": 0,
+      "created_utc": 1770543417.0,
+      "score": 182.37603634128757,
+      "category": "Bounty"
     },
     {
       "title": "Feeble attempt of mine to create a security skill for OpenClaw",
@@ -70,7 +81,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770536403.0,
-      "score": 85.29968119925906,
+      "score": 65.68212150622342,
       "category": "News"
     },
     {
@@ -81,7 +92,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770534453.0,
-      "score": 69.2918744487731,
+      "score": 55.76256939028669,
       "category": "News"
     },
     {
@@ -92,7 +103,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770473386.0,
-      "score": 50.37936449819827,
+      "score": 48.662532533904084,
       "category": "News"
     },
     {
@@ -103,7 +114,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770465600.0,
-      "score": 45.42940513538665,
+      "score": 44.02867939989789,
       "category": "News"
     },
     {
@@ -114,7 +125,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770459300.0,
-      "score": 42.08369035278611,
+      "score": 40.878948680031414,
       "category": "News"
     },
     {
@@ -125,7 +136,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770454030.0,
-      "score": 39.64153973263404,
+      "score": 38.57078646702738,
       "category": "News"
     },
     {
@@ -136,7 +147,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770415202.0,
-      "score": 27.76881532123832,
+      "score": 27.239114392669393,
       "category": "News"
     },
     {
@@ -147,7 +158,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770411665.0,
-      "score": 27.031323478687447,
+      "score": 26.52913040026838,
       "category": "News"
     },
     {
@@ -158,7 +169,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770409619.0,
-      "score": 26.622329891078532,
+      "score": 26.135081605459845,
       "category": "News"
     },
     {
@@ -169,7 +180,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770407032.0,
-      "score": 26.1225762192689,
+      "score": 25.653288224636928,
       "category": "News"
     },
     {
@@ -180,7 +191,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770472860.0,
-      "score": 25.00561628461517,
+      "score": 24.15948865103824,
       "category": "News"
     },
     {
@@ -191,19 +202,8 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770392688.0,
-      "score": 23.65995460030873,
+      "score": 23.27432409360796,
       "category": "News"
-    },
-    {
-      "title": "Question for who’ve hack on Airbnb bug Bounty",
-      "url": "https://www.reddit.com/r/bugbounty/comments/1qyuu64/question_for_whove_hack_on_airbnb_bug_bounty/",
-      "source": "r/bugbounty",
-      "source_type": "reddit",
-      "upvotes": 0,
-      "comments": 0,
-      "created_utc": 1770508496.0,
-      "score": 19.808610998055002,
-      "category": "Bounty"
     },
     {
       "title": "JHT Course Launch: Dark Web 2 - CTI Researcher",
@@ -213,7 +213,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770400471.0,
-      "score": 12.467719970537637,
+      "score": 12.253743314447679,
       "category": "News"
     },
     {
@@ -224,7 +224,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770372027.0,
-      "score": 10.415652301888006,
+      "score": 10.265893007309,
       "category": "News"
     },
     {
@@ -235,7 +235,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770175747.0,
-      "score": 5.852122889848269,
+      "score": 5.81242203028073,
       "category": "News"
     },
     {
@@ -246,7 +246,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770171234.0,
-      "score": 5.781432483518662,
+      "score": 5.742681800721608,
       "category": "News"
     },
     {
@@ -257,7 +257,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770102000.0,
-      "score": 4.877565994718437,
+      "score": 4.8499557612126525,
       "category": "News"
     }
   ]
