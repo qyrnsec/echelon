@@ -1,3 +1,4 @@
+import time
 from scraper.sources.reddit import fetch_reddit
 from scraper.sources.rss import fetch_rss
 from scraper.sources.youtube import fetch_youtube
@@ -7,6 +8,13 @@ from scraper.sources.nvd import fetch_nvd
 from scraper.scoring import rank_items
 from scraper.categorizer import categorize_items
 from scraper.digest import generate_digest
+
+DAYS_BACK = 7
+
+
+def filter_recent(items):
+    cutoff = time.time() - (DAYS_BACK * 86400)
+    return [i for i in items if i.get("created_utc", 0) >= cutoff]
 
 
 def run():
@@ -32,7 +40,10 @@ def run():
     print("[6/6] NVD...")
     all_items.extend(fetch_nvd())
 
-    print(f"\nTotal brut : {len(all_items)} éléments\n")
+    print(f"\nTotal brut : {len(all_items)} éléments")
+
+    all_items = filter_recent(all_items)
+    print(f"Après filtre 7 jours : {len(all_items)} éléments\n")
 
     print("Scoring et classement...")
     ranked = rank_items(all_items)

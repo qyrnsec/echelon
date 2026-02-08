@@ -1,6 +1,6 @@
 {
   "date": "2026-02-08",
-  "generated_at": "2026-02-08T05:03:22.061368+00:00",
+  "generated_at": "2026-02-08T10:00:43.835730+00:00",
   "count": 23,
   "items": [
     {
@@ -10,8 +10,8 @@
       "source_type": "rss",
       "upvotes": 0,
       "comments": 0,
-      "created_utc": 1770526994.7264931,
-      "score": 491905.9187678458,
+      "created_utc": 1770544835.9620779,
+      "score": 457627.776984395,
       "category": "News"
     },
     {
@@ -21,8 +21,8 @@
       "source_type": "rss",
       "upvotes": 0,
       "comments": 0,
-      "created_utc": 1770526994.7264931,
-      "score": 491905.9187678458,
+      "created_utc": 1770544835.9620779,
+      "score": 457627.776984395,
       "category": "News"
     },
     {
@@ -52,26 +52,37 @@
       "category": "Vulns"
     },
     {
-      "title": "Stuck in the process as a beginner (API Pentest).",
-      "url": "https://www.reddit.com/r/bugbounty/comments/1qyzqv0/stuck_in_the_process_as_a_beginner_api_pentest/",
-      "source": "r/bugbounty",
-      "source_type": "reddit",
+      "title": "OpenClaw Integrates VirusTotal Scanning to Detect Malicious ClawHub Skills",
+      "url": "https://thehackernews.com/2026/02/openclaw-integrates-virustotal-scanning.html",
+      "source": "The Hacker News",
+      "source_type": "rss",
       "upvotes": 0,
       "comments": 0,
-      "created_utc": 1770522520.0,
-      "score": 160.64095864787475,
-      "category": "Tools"
+      "created_utc": 1770532320.0,
+      "score": 287.45203058030705,
+      "category": "News"
     },
     {
-      "title": "Looking for 2 people to help me with bug bounty",
-      "url": "https://www.reddit.com/r/bugbounty/comments/1qyyd6c/looking_for_2_people_to_help_me_with_bug_bounty/",
-      "source": "r/bugbounty",
+      "title": "Feeble attempt of mine to create a security skill for OpenClaw",
+      "url": "https://www.reddit.com/r/cybersecurity/comments/1qz3tkq/feeble_attempt_of_mine_to_create_a_security_skill/",
+      "source": "r/cybersecurity",
       "source_type": "reddit",
       "upvotes": 0,
       "comments": 0,
-      "created_utc": 1770518353.0,
-      "score": 83.24618531313916,
-      "category": "Bounty"
+      "created_utc": 1770536403.0,
+      "score": 85.29968119925906,
+      "category": "News"
+    },
+    {
+      "title": "Why is there no juiced up brother for flipper zero yet ?",
+      "url": "https://www.reddit.com/r/cybersecurity/comments/1qz3ae1/why_is_there_no_juiced_up_brother_for_flipper/",
+      "source": "r/cybersecurity",
+      "source_type": "reddit",
+      "upvotes": 0,
+      "comments": 0,
+      "created_utc": 1770534453.0,
+      "score": 69.2918744487731,
+      "category": "News"
     },
     {
       "title": "State actor targets 155 countries in 'Shadow Campaigns' espionage op",
@@ -81,18 +92,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770473386.0,
-      "score": 67.14407976754136,
-      "category": "News"
-    },
-    {
-      "title": "Table of 2FA strength",
-      "url": "https://www.reddit.com/r/cybersecurity/comments/1qyxd9t/table_of_2fa_strength/",
-      "source": "r/cybersecurity",
-      "source_type": "reddit",
-      "upvotes": 0,
-      "comments": 0,
-      "created_utc": 1770515515.0,
-      "score": 62.67930543905253,
+      "score": 50.37936449819827,
       "category": "News"
     },
     {
@@ -103,7 +103,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770465600.0,
-      "score": 58.62996911598672,
+      "score": 45.42940513538665,
       "category": "News"
     },
     {
@@ -114,7 +114,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770459300.0,
-      "score": 53.17416928575101,
+      "score": 42.08369035278611,
       "category": "News"
     },
     {
@@ -125,18 +125,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770454030.0,
-      "score": 49.333960720026184,
-      "category": "News"
-    },
-    {
-      "title": "HackTheBox - Signed",
-      "url": "https://www.youtube.com/watch?v=d7FCnR6YS_E",
-      "source": "IppSec",
-      "source_type": "youtube",
-      "upvotes": 0,
-      "comments": 0,
-      "created_utc": 1770472860.0,
-      "score": 33.245881295005944,
+      "score": 39.64153973263404,
       "category": "News"
     },
     {
@@ -147,7 +136,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770415202.0,
-      "score": 32.20034483083665,
+      "score": 27.76881532123832,
       "category": "News"
     },
     {
@@ -158,7 +147,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770411665.0,
-      "score": 31.212868346585676,
+      "score": 27.031323478687447,
       "category": "News"
     },
     {
@@ -169,7 +158,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770409619.0,
-      "score": 30.668824454593,
+      "score": 26.622329891078532,
       "category": "News"
     },
     {
@@ -180,7 +169,18 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770407032.0,
-      "score": 30.007490628414253,
+      "score": 26.1225762192689,
+      "category": "News"
+    },
+    {
+      "title": "HackTheBox - Signed",
+      "url": "https://www.youtube.com/watch?v=d7FCnR6YS_E",
+      "source": "IppSec",
+      "source_type": "youtube",
+      "upvotes": 0,
+      "comments": 0,
+      "created_utc": 1770472860.0,
+      "score": 25.00561628461517,
       "category": "News"
     },
     {
@@ -191,19 +191,19 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770392688.0,
-      "score": 26.80285595537055,
+      "score": 23.65995460030873,
       "category": "News"
     },
     {
-      "title": "'Encrypt It Already' Campaign Pushes Big Tech to Prioritize E2E Encryption",
-      "url": "https://www.darkreading.com/cloud-security/encrypt-it-already-pushes-big-tech-e2e-encryption",
-      "source": "Dark Reading",
-      "source_type": "rss",
+      "title": "Question for who’ve hack on Airbnb bug Bounty",
+      "url": "https://www.reddit.com/r/bugbounty/comments/1qyuu64/question_for_whove_hack_on_airbnb_bug_bounty/",
+      "source": "r/bugbounty",
+      "source_type": "reddit",
       "upvotes": 0,
       "comments": 0,
-      "created_utc": 1770392081.0,
-      "score": 26.682271849540058,
-      "category": "News"
+      "created_utc": 1770508496.0,
+      "score": 19.808610998055002,
+      "category": "Bounty"
     },
     {
       "title": "JHT Course Launch: Dark Web 2 - CTI Researcher",
@@ -213,7 +213,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770400471.0,
-      "score": 14.225757801078124,
+      "score": 12.467719970537637,
       "category": "News"
     },
     {
@@ -224,7 +224,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770372027.0,
-      "score": 11.614773206859695,
+      "score": 10.415652301888006,
       "category": "News"
     },
     {
@@ -235,7 +235,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770175747.0,
-      "score": 6.1493778693218575,
+      "score": 5.852122889848269,
       "category": "News"
     },
     {
@@ -246,7 +246,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770171234.0,
-      "score": 6.071371587653357,
+      "score": 5.781432483518662,
       "category": "News"
     },
     {
@@ -257,7 +257,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770102000.0,
-      "score": 5.082328486617283,
+      "score": 4.877565994718437,
       "category": "News"
     }
   ]
