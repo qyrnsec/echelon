@@ -6,7 +6,7 @@ export default function Footer() {
           ECHELON — Veille cybersécurité hebdomadaire
         </p>
         <p className="mt-1">
-          Sources : Reddit, RSS, Twitter
+          Sources : RSS, GitHub, YouTube, Podcasts, Reddit, NVD
         </p>
       </div>
     </footer>
