@@ -4,7 +4,13 @@ import time
 def score_item(item):
     source_type = item.get("source_type", "")
 
-    if source_type in ("reddit", "rss"):
+    if source_type == "reddit":
+        age_hours = (time.time() - item.get("created_utc", 0)) / 3600
+        if age_hours <= 0:
+            age_hours = 1
+        return max(0, 400 / age_hours)
+
+    if source_type == "rss":
         age_hours = (time.time() - item.get("created_utc", 0)) / 3600
         if age_hours <= 0:
             age_hours = 1
