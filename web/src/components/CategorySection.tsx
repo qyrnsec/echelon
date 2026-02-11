@@ -1,4 +1,5 @@
 import type { DigestItem } from "@/lib/types";
+import type { ReactNode } from "react";
 import DigestCard from "./DigestCard";
 
 const CATEGORY_ICONS: Record<string, string> = {
@@ -12,9 +13,13 @@ const CATEGORY_ICONS: Record<string, string> = {
 export default function CategorySection({
   category,
   items,
+  highlightedUrls,
+  renderActions,
 }: {
   category: string;
   items: DigestItem[];
+  highlightedUrls?: Set<string>;
+  renderActions?: (item: DigestItem) => ReactNode;
 }) {
   if (items.length === 0) return null;
 
@@ -27,7 +32,12 @@ export default function CategorySection({
       </h2>
       <div className="space-y-2">
         {items.map((item, i) => (
-          <DigestCard key={`${item.url}-${i}`} item={item} />
+          <DigestCard
+            key={`${item.url}-${i}`}
+            item={item}
+            highlighted={highlightedUrls?.has(item.url)}
+            actions={renderActions?.(item)}
+          />
         ))}
       </div>
     </section>
