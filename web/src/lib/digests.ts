@@ -26,3 +26,13 @@ export function getLatestDigest(): Digest | null {
   if (dates.length === 0) return null;
   return getDigest(dates[0]);
 }
+
+export function getAllDigests(): Digest[] {
+  const dates = getDigestDates();
+  const digests: Digest[] = [];
+  for (const date of dates) {
+    const d = getDigest(date);
+    if (d) digests.push(d);
+  }
+  return digests;
+}
