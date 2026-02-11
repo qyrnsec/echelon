@@ -19,3 +19,16 @@ export interface Digest {
   count: number;
   items: DigestItem[];
 }
+
+export interface FilterState {
+  categories: string[];
+  sourceTypes: string[];
+}
+
+export interface StackConfig {
+  keywords: string[];
+}
+
+export interface BookmarkedItem extends DigestItem {
+  digestDate: string;
+}
