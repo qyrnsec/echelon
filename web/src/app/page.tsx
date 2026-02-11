@@ -1,5 +1,6 @@
 import { getLatestDigest } from "@/lib/digests";
 import CategorySection from "@/components/CategorySection";
+import ExportButton from "@/components/ExportButton";
 import type { DigestItem } from "@/lib/types";
 
 export default function Home() {
@@ -28,9 +29,12 @@ export default function Home() {
   return (
     <div>
       <div className="mb-8">
-        <h1 className="text-lg font-bold">
-          <span className="text-accent">$</span> digest —date {digest.date}
-        </h1>
+        <div className="flex items-center justify-between">
+          <h1 className="text-lg font-bold">
+            <span className="text-accent">$</span> digest —date {digest.date}
+          </h1>
+          <ExportButton date={digest.date} items={digest.items} />
+        </div>
         <p className="text-xs text-text-dim mt-1">
           {digest.count} éléments sélectionnés
         </p>
