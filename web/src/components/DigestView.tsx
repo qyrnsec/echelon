@@ -1,13 +1,15 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import type { DigestItem, FilterState } from "@/lib/types";
+import type { DigestItem, FilterState, StackConfig } from "@/lib/types";
 import { getStorageItem, setStorageItem } from "@/lib/storage";
 import CategorySection from "./CategorySection";
 import DigestFilters from "./DigestFilters";
 import ExportButton from "./ExportButton";
+import StackAlertBanner from "./StackAlertBanner";
 
-const STORAGE_KEY = "echelon:filters";
+const FILTERS_KEY = "echelon:filters";
+const STACK_KEY = "echelon:stack";
 const CATEGORY_ORDER = ["Vulns", "Bounty", "Tools", "Tutorials", "News"];
 
 export default function DigestView({
@@ -25,17 +27,20 @@ export default function DigestView({
     categories: [],
     sourceTypes: [],
   });
+  const [stackKeywords, setStackKeywords] = useState<string[]>([]);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    const saved = getStorageItem<FilterState>(STORAGE_KEY);
-    if (saved) setFilters(saved);
+    const savedFilters = getStorageItem<FilterState>(FILTERS_KEY);
+    if (savedFilters) setFilters(savedFilters);
+    const savedStack = getStorageItem<StackConfig>(STACK_KEY);
+    if (savedStack) setStackKeywords(savedStack.keywords);
     setMounted(true);
   }, []);
 
   const handleFilterChange = (next: FilterState) => {
     setFilters(next);
-    setStorageItem(STORAGE_KEY, next);
+    setStorageItem(FILTERS_KEY, next);
   };
 
   const filtered = items.filter((item) => {
@@ -47,6 +52,16 @@ export default function DigestView({
     }
     return true;
   });
+
+  const highlightedUrls = new Set<string>();
+  if (stackKeywords.length > 0) {
+    for (const item of filtered) {
+      const titleLower = item.title.toLowerCase();
+      if (stackKeywords.some((kw) => titleLower.includes(kw))) {
+        highlightedUrls.add(item.url);
+      }
+    }
+  }
 
   const grouped: Record<string, DigestItem[]> = {};
   for (const item of filtered) {
@@ -79,13 +94,17 @@ export default function DigestView({
         </p>
       </div>
       {mounted && (
-        <DigestFilters filters={filters} onChange={handleFilterChange} />
+        <>
+          <DigestFilters filters={filters} onChange={handleFilterChange} />
+          <StackAlertBanner matchCount={highlightedUrls.size} />
+        </>
       )}
       {CATEGORY_ORDER.map((cat) => (
         <CategorySection
           key={cat}
           category={cat}
           items={grouped[cat] || []}
+          highlightedUrls={highlightedUrls}
         />
       ))}
     </div>
