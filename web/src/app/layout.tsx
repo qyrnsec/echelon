@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "ECHELON — Veille Cybersécurité",
+  title: "Échelon",
   description: "Digest hebdomadaire des meilleures ressources cybersécurité",
   icons: { icon: "/favicon.ico" },
 };
