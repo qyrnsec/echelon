@@ -4,28 +4,6 @@
   "count": 23,
   "items": [
     {
-      "title": "Advanced Web Shell Detection and Prevention: A Deep Dive into CrowdStrike's Linux Sensor Capabilities",
-      "url": "https://www.crowdstrike.com/en-us/blog/advanced-web-shell-detection-and-prevention/",
-      "source": "CrowdStrike Blog",
-      "source_type": "rss",
-      "upvotes": 0,
-      "comments": 0,
-      "created_utc": 1770547357.456035,
-      "score": 484453.1966928513,
-      "category": "News"
-    },
-    {
-      "title": "What Security Teams Need to Know About OpenClaw, the AI Super Agent",
-      "url": "https://www.crowdstrike.com/en-us/blog/what-security-teams-need-to-know-about-openclaw-ai-super-agent/",
-      "source": "CrowdStrike Blog",
-      "source_type": "rss",
-      "upvotes": 0,
-      "comments": 0,
-      "created_utc": 1770547357.456035,
-      "score": 484453.1966928513,
-      "category": "News"
-    },
-    {
       "title": "[CRITICAL] CVE-2026-1709 — Keylime Missing Authentication for Critical Function and Improper Authentication",
       "url": "https://github.com/advisories/GHSA-4jqp-9qjv-57m2",
       "source": "GitHub Advisory",
@@ -52,6 +30,28 @@
       "category": "Vulns"
     },
     {
+      "title": "Advanced Web Shell Detection and Prevention: A Deep Dive into CrowdStrike's Linux Sensor Capabilities",
+      "url": "https://www.crowdstrike.com/en-us/blog/advanced-web-shell-detection-and-prevention/",
+      "source": "CrowdStrike Blog",
+      "source_type": "rss",
+      "upvotes": 0,
+      "comments": 0,
+      "created_utc": 1770547357.456035,
+      "score": 12.328208134619747,
+      "category": "News"
+    },
+    {
+      "title": "What Security Teams Need to Know About OpenClaw, the AI Super Agent",
+      "url": "https://www.crowdstrike.com/en-us/blog/what-security-teams-need-to-know-about-openclaw-ai-super-agent/",
+      "source": "CrowdStrike Blog",
+      "source_type": "rss",
+      "upvotes": 0,
+      "comments": 0,
+      "created_utc": 1770547357.456035,
+      "score": 12.328208134619747,
+      "category": "News"
+    },
+    {
       "title": "OpenClaw Integrates VirusTotal Scanning to Detect Malicious ClawHub Skills",
       "url": "https://thehackernews.com/2026/02/openclaw-integrates-virustotal-scanning.html",
       "source": "The Hacker News",
@@ -59,40 +59,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770532320.0,
-      "score": 239.28394926950733,
-      "category": "News"
-    },
-    {
-      "title": "Is anyone working on bug bounty as a side hustle or full-time?",
-      "url": "https://www.reddit.com/r/bugbounty/comments/1qz5qoc/is_anyone_working_on_bug_bounty_as_a_side_hustle/",
-      "source": "r/bugbounty",
-      "source_type": "reddit",
-      "upvotes": 0,
-      "comments": 0,
-      "created_utc": 1770543417.0,
-      "score": 182.37603634128757,
-      "category": "Bounty"
-    },
-    {
-      "title": "Feeble attempt of mine to create a security skill for OpenClaw",
-      "url": "https://www.reddit.com/r/cybersecurity/comments/1qz3tkq/feeble_attempt_of_mine_to_create_a_security_skill/",
-      "source": "r/cybersecurity",
-      "source_type": "reddit",
-      "upvotes": 0,
-      "comments": 0,
-      "created_utc": 1770536403.0,
-      "score": 65.68212150622342,
-      "category": "News"
-    },
-    {
-      "title": "Why is there no juiced up brother for flipper zero yet ?",
-      "url": "https://www.reddit.com/r/cybersecurity/comments/1qz3ae1/why_is_there_no_juiced_up_brother_for_flipper/",
-      "source": "r/cybersecurity",
-      "source_type": "reddit",
-      "upvotes": 0,
-      "comments": 0,
-      "created_utc": 1770534453.0,
-      "score": 55.76256939028669,
+      "score": 11.724448266149091,
       "category": "News"
     },
     {
@@ -103,7 +70,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770473386.0,
-      "score": 48.662532533904084,
+      "score": 9.836476879029918,
       "category": "News"
     },
     {
@@ -114,7 +81,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770465600.0,
-      "score": 44.02867939989789,
+      "score": 9.631573686228474,
       "category": "News"
     },
     {
@@ -125,7 +92,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770459300.0,
-      "score": 40.878948680031414,
+      "score": 9.471922034926662,
       "category": "News"
     },
     {
@@ -136,7 +103,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770454030.0,
-      "score": 38.57078646702738,
+      "score": 9.342382046947328,
       "category": "News"
     },
     {
@@ -147,7 +114,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770415202.0,
-      "score": 27.239114392669393,
+      "score": 8.487189257936192,
       "category": "News"
     },
     {
@@ -158,7 +125,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770411665.0,
-      "score": 26.52913040026838,
+      "score": 8.417002705154491,
       "category": "News"
     },
     {
@@ -169,7 +136,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770409619.0,
-      "score": 26.135081605459845,
+      "score": 8.376930291953594,
       "category": "News"
     },
     {
@@ -180,18 +147,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770407032.0,
-      "score": 25.653288224636928,
-      "category": "News"
-    },
-    {
-      "title": "HackTheBox - Signed",
-      "url": "https://www.youtube.com/watch?v=d7FCnR6YS_E",
-      "source": "IppSec",
-      "source_type": "youtube",
-      "upvotes": 0,
-      "comments": 0,
-      "created_utc": 1770472860.0,
-      "score": 24.15948865103824,
+      "score": 8.326804964595144,
       "category": "News"
     },
     {
@@ -202,7 +158,18 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770392688.0,
-      "score": 23.27432409360796,
+      "score": 8.059412268416379,
+      "category": "News"
+    },
+    {
+      "title": "HackTheBox - Signed",
+      "url": "https://www.youtube.com/watch?v=d7FCnR6YS_E",
+      "source": "IppSec",
+      "source_type": "youtube",
+      "upvotes": 0,
+      "comments": 0,
+      "created_utc": 1770472860.0,
+      "score": 4.911180000436314,
       "category": "News"
     },
     {
@@ -213,7 +180,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770400471.0,
-      "score": 12.253743314447679,
+      "score": 4.101164836801131,
       "category": "News"
     },
     {
@@ -224,7 +191,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770372027.0,
-      "score": 10.265893007309,
+      "score": 3.851555109263163,
       "category": "News"
     },
     {
@@ -235,7 +202,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770175747.0,
-      "score": 5.81242203028073,
+      "score": 3.2548566501060794,
       "category": "News"
     },
     {
@@ -246,7 +213,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770171234.0,
-      "score": 5.742681800721608,
+      "score": 3.2328713765078745,
       "category": "News"
     },
     {
@@ -257,7 +224,40 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770102000.0,
-      "score": 4.8499557612126525,
+      "score": 2.9293271509181547,
+      "category": "News"
+    },
+    {
+      "title": "Is anyone working on bug bounty as a side hustle or full-time?",
+      "url": "https://www.reddit.com/r/bugbounty/comments/1qz5qoc/is_anyone_working_on_bug_bounty_as_a_side_hustle/",
+      "source": "r/bugbounty",
+      "source_type": "reddit",
+      "upvotes": 0,
+      "comments": 0,
+      "created_utc": 1770543417.0,
+      "score": 2.4328130035245175,
+      "category": "Bounty"
+    },
+    {
+      "title": "Feeble attempt of mine to create a security skill for OpenClaw",
+      "url": "https://www.reddit.com/r/cybersecurity/comments/1qz3tkq/feeble_attempt_of_mine_to_create_a_security_skill/",
+      "source": "r/cybersecurity",
+      "source_type": "reddit",
+      "upvotes": 0,
+      "comments": 0,
+      "created_utc": 1770536403.0,
+      "score": 2.37649099086895,
+      "category": "News"
+    },
+    {
+      "title": "Why is there no juiced up brother for flipper zero yet ?",
+      "url": "https://www.reddit.com/r/cybersecurity/comments/1qz3ae1/why_is_there_no_juiced_up_brother_for_flipper/",
+      "source": "r/cybersecurity",
+      "source_type": "reddit",
+      "upvotes": 0,
+      "comments": 0,
+      "created_utc": 1770534453.0,
+      "score": 2.3612929308894093,
       "category": "News"
     }
   ]
