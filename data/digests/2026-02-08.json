@@ -13,7 +13,7 @@
       "severity": "critical",
       "severity_score": 10,
       "created_utc": 1770417284.0,
-      "score": 800,
+      "score": 100,
       "category": "Vulns"
     },
     {
@@ -26,7 +26,7 @@
       "severity": "critical",
       "severity_score": 10,
       "created_utc": 1770413449.0,
-      "score": 800,
+      "score": 100,
       "category": "Vulns"
     },
     {
@@ -37,7 +37,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770547357.456035,
-      "score": 12.328208134619747,
+      "score": 55,
       "category": "News"
     },
     {
@@ -48,7 +48,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770547357.456035,
-      "score": 12.328208134619747,
+      "score": 55,
       "category": "News"
     },
     {
@@ -59,7 +59,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770532320.0,
-      "score": 11.724448266149091,
+      "score": 55,
       "category": "News"
     },
     {
@@ -70,7 +70,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770473386.0,
-      "score": 9.836476879029918,
+      "score": 55,
       "category": "News"
     },
     {
@@ -81,7 +81,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770465600.0,
-      "score": 9.631573686228474,
+      "score": 55,
       "category": "News"
     },
     {
@@ -92,7 +92,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770459300.0,
-      "score": 9.471922034926662,
+      "score": 55,
       "category": "News"
     },
     {
@@ -103,7 +103,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770454030.0,
-      "score": 9.342382046947328,
+      "score": 55,
       "category": "News"
     },
     {
@@ -114,7 +114,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770415202.0,
-      "score": 8.487189257936192,
+      "score": 55,
       "category": "News"
     },
     {
@@ -125,7 +125,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770411665.0,
-      "score": 8.417002705154491,
+      "score": 55,
       "category": "News"
     },
     {
@@ -136,62 +136,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770409619.0,
-      "score": 8.376930291953594,
-      "category": "News"
-    },
-    {
-      "title": "I Am in the Epstein Files",
-      "url": "https://www.schneier.com/blog/archives/2026/02/i-am-in-the-epstein-files.html",
-      "source": "Schneier on Security",
-      "source_type": "rss",
-      "upvotes": 0,
-      "comments": 0,
-      "created_utc": 1770407032.0,
-      "score": 8.326804964595144,
-      "category": "News"
-    },
-    {
-      "title": "EU threatens TikTok with massive fine over addictive design features",
-      "url": "https://therecord.media/eu-threatens-tiktok-with-fine-over-addictive-features",
-      "source": "The Record",
-      "source_type": "rss",
-      "upvotes": 0,
-      "comments": 0,
-      "created_utc": 1770392688.0,
-      "score": 8.059412268416379,
-      "category": "News"
-    },
-    {
-      "title": "HackTheBox - Signed",
-      "url": "https://www.youtube.com/watch?v=d7FCnR6YS_E",
-      "source": "IppSec",
-      "source_type": "youtube",
-      "upvotes": 0,
-      "comments": 0,
-      "created_utc": 1770472860.0,
-      "score": 4.911180000436314,
-      "category": "News"
-    },
-    {
-      "title": "JHT Course Launch: Dark Web 2 - CTI Researcher",
-      "url": "https://www.youtube.com/watch?v=9E_fxRgwIeA",
-      "source": "John Hammond",
-      "source_type": "youtube",
-      "upvotes": 0,
-      "comments": 0,
-      "created_utc": 1770400471.0,
-      "score": 4.101164836801131,
-      "category": "News"
-    },
-    {
-      "title": "Tips from a 20-year developer veteran turned consultancy founder – Tapas Adhikary [Podcast #206]",
-      "url": "https://www.youtube.com/watch?v=GAZkxw6DJJE",
-      "source": "David Bombal",
-      "source_type": "youtube",
-      "upvotes": 0,
-      "comments": 0,
-      "created_utc": 1770372027.0,
-      "score": 3.851555109263163,
+      "score": 55,
       "category": "News"
     },
     {
@@ -202,7 +147,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770175747.0,
-      "score": 3.2548566501060794,
+      "score": 50,
       "category": "News"
     },
     {
@@ -213,7 +158,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770171234.0,
-      "score": 3.2328713765078745,
+      "score": 50,
       "category": "News"
     },
     {
@@ -224,7 +169,29 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770102000.0,
-      "score": 2.9293271509181547,
+      "score": 50,
+      "category": "News"
+    },
+    {
+      "title": "I Am in the Epstein Files",
+      "url": "https://www.schneier.com/blog/archives/2026/02/i-am-in-the-epstein-files.html",
+      "source": "Schneier on Security",
+      "source_type": "rss",
+      "upvotes": 0,
+      "comments": 0,
+      "created_utc": 1770407032.0,
+      "score": 45,
+      "category": "News"
+    },
+    {
+      "title": "EU threatens TikTok with massive fine over addictive design features",
+      "url": "https://therecord.media/eu-threatens-tiktok-with-fine-over-addictive-features",
+      "source": "The Record",
+      "source_type": "rss",
+      "upvotes": 0,
+      "comments": 0,
+      "created_utc": 1770392688.0,
+      "score": 45,
       "category": "News"
     },
     {
@@ -235,7 +202,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770543417.0,
-      "score": 2.4328130035245175,
+      "score": 33,
       "category": "Bounty"
     },
     {
@@ -246,7 +213,7 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770536403.0,
-      "score": 2.37649099086895,
+      "score": 33,
       "category": "News"
     },
     {
@@ -257,7 +224,40 @@
       "upvotes": 0,
       "comments": 0,
       "created_utc": 1770534453.0,
-      "score": 2.3612929308894093,
+      "score": 33,
+      "category": "News"
+    },
+    {
+      "title": "HackTheBox - Signed",
+      "url": "https://www.youtube.com/watch?v=d7FCnR6YS_E",
+      "source": "IppSec",
+      "source_type": "youtube",
+      "upvotes": 0,
+      "comments": 0,
+      "created_utc": 1770472860.0,
+      "score": 30,
+      "category": "News"
+    },
+    {
+      "title": "JHT Course Launch: Dark Web 2 - CTI Researcher",
+      "url": "https://www.youtube.com/watch?v=9E_fxRgwIeA",
+      "source": "John Hammond",
+      "source_type": "youtube",
+      "upvotes": 0,
+      "comments": 0,
+      "created_utc": 1770400471.0,
+      "score": 30,
+      "category": "News"
+    },
+    {
+      "title": "Tips from a 20-year developer veteran turned consultancy founder – Tapas Adhikary [Podcast #206]",
+      "url": "https://www.youtube.com/watch?v=GAZkxw6DJJE",
+      "source": "David Bombal",
+      "source_type": "youtube",
+      "upvotes": 0,
+      "comments": 0,
+      "created_utc": 1770372027.0,
+      "score": 30,
       "category": "News"
     }
   ]

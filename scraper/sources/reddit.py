@@ -1,32 +1,37 @@
 import time
-import feedparser
+import requests
 from scraper.config import SUBREDDITS
 
 
 def fetch_reddit():
     items = []
+    headers = {"User-Agent": "Echelon/1.0 (cybersec digest bot)"}
 
     for sub_name in SUBREDDITS:
         try:
-            url = f"https://www.reddit.com/r/{sub_name}/hot.rss?limit=50"
-            feed = feedparser.parse(url)
+            url = f"https://www.reddit.com/r/{sub_name}/hot.json?limit=50&raw_json=1"
+            resp = requests.get(url, headers=headers, timeout=15)
+            resp.raise_for_status()
+            data = resp.json()
+
             count = 0
-            for entry in feed.entries:
-                title = entry.get("title", "")
+            for child in data.get("data", {}).get("children", []):
+                post = child.get("data", {})
+                title = post.get("title", "")
                 if title.lower() in ("[removed]", "[deleted]", ""):
                     continue
-
-                published = entry.get("published_parsed") or entry.get("updated_parsed")
-                created_utc = time.mktime(published) if published else time.time()
+                selftext = post.get("selftext", "")
+                if selftext.lower() in ("[removed]", "[deleted]"):
+                    continue
 
                 items.append({
                     "title": title,
-                    "url": entry.get("link", ""),
+                    "url": f"https://www.reddit.com{post.get('permalink', '')}",
                     "source": f"r/{sub_name}",
                     "source_type": "reddit",
-                    "upvotes": 0,
-                    "comments": 0,
-                    "created_utc": created_utc,
+                    "upvotes": post.get("ups", 0),
+                    "comments": post.get("num_comments", 0),
+                    "created_utc": post.get("created_utc", time.time()),
                 })
                 count += 1
             print(f"[Reddit] r/{sub_name} : {count} posts récupérés")
