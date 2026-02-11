@@ -23,6 +23,11 @@ def fetch_youtube():
                 if not link:
                     link = f"https://www.youtube.com/watch?v={video_id}"
 
+                views = 0
+                stats = entry.get("media_statistics", {})
+                if stats:
+                    views = int(stats.get("views", 0))
+
                 items.append({
                     "title": entry.get("title", ""),
                     "url": link,
@@ -30,6 +35,7 @@ def fetch_youtube():
                     "source_type": "youtube",
                     "upvotes": 0,
                     "comments": 0,
+                    "views": views,
                     "created_utc": created_utc,
                 })
                 count += 1
