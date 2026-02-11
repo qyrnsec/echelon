@@ -7,6 +7,7 @@ import CategorySection from "./CategorySection";
 import DigestFilters from "./DigestFilters";
 import ExportButton from "./ExportButton";
 import StackAlertBanner from "./StackAlertBanner";
+import BookmarkButton from "./BookmarkButton";
 
 const FILTERS_KEY = "echelon:filters";
 const STACK_KEY = "echelon:stack";
@@ -105,6 +106,9 @@ export default function DigestView({
           category={cat}
           items={grouped[cat] || []}
           highlightedUrls={highlightedUrls}
+          renderActions={(item) => (
+            <BookmarkButton item={item} digestDate={date} />
+          )}
         />
       ))}
     </div>

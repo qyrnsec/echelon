@@ -31,6 +31,9 @@ export default function Header() {
             <Link href="/archive" className="hover:text-accent transition-colors">
               Archives
             </Link>
+            <Link href="/my-digest" className="hover:text-accent transition-colors">
+              Mon Digest
+            </Link>
             <button
               onClick={() => setStackOpen(true)}
               className="hover:text-accent transition-colors cursor-pointer"
