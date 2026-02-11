@@ -12,11 +12,15 @@ def fetch_reddit():
             feed = feedparser.parse(url)
             count = 0
             for entry in feed.entries:
+                title = entry.get("title", "")
+                if title.lower() in ("[removed]", "[deleted]", ""):
+                    continue
+
                 published = entry.get("published_parsed") or entry.get("updated_parsed")
                 created_utc = time.mktime(published) if published else time.time()
 
                 items.append({
-                    "title": entry.get("title", ""),
+                    "title": title,
                     "url": entry.get("link", ""),
                     "source": f"r/{sub_name}",
                     "source_type": "reddit",

@@ -1,32 +1,25 @@
 import time
 
 
+def _age_hours(item):
+    age = (time.time() - item.get("created_utc", 0)) / 3600
+    return max(age, 1)
+
+
 def score_item(item):
     source_type = item.get("source_type", "")
 
     if source_type == "reddit":
-        age_hours = (time.time() - item.get("created_utc", 0)) / 3600
-        if age_hours <= 0:
-            age_hours = 1
-        return max(0, 200 / age_hours)
+        return max(0, 200 / _age_hours(item))
 
     if source_type == "rss":
-        age_hours = (time.time() - item.get("created_utc", 0)) / 3600
-        if age_hours <= 0:
-            age_hours = 1
-        return max(0, 1000 / age_hours)
+        return max(0, 1000 / _age_hours(item))
 
     if source_type == "podcast":
-        age_hours = (time.time() - item.get("created_utc", 0)) / 3600
-        if age_hours <= 0:
-            age_hours = 1
-        return max(0, 600 / age_hours)
+        return max(0, 600 / _age_hours(item))
 
     if source_type == "youtube":
-        age_hours = (time.time() - item.get("created_utc", 0)) / 3600
-        if age_hours <= 0:
-            age_hours = 1
-        return max(0, 500 / age_hours)
+        return max(0, 500 / _age_hours(item))
 
     if source_type == "github":
         severity_score = item.get("severity_score", 0)
