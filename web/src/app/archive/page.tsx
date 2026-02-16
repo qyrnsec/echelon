@@ -7,7 +7,7 @@ export default function ArchivePage() {
 
   return (
     <div>
-      <h1 className="text-lg font-bold mb-6">
+      <h1 className="text-base sm:text-lg font-bold mb-4 sm:mb-6">
         <span className="text-accent">$</span> ls archives/
       </h1>
       <ArchiveSearch dates={dates} digests={digests} />

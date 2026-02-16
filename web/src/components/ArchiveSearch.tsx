@@ -63,20 +63,20 @@ export default function ArchiveSearch({
 
   return (
     <div>
-      <div className="mb-6">
-        <div className="flex items-center gap-2 border border-border rounded-lg px-4 py-2.5 focus-within:border-accent/50 transition-colors">
-          <span className="text-accent text-sm shrink-0">$ grep -r &quot;</span>
+      <div className="mb-4 sm:mb-6">
+        <div className="flex flex-col sm:flex-row sm:items-center gap-2 border border-border rounded-lg px-3 sm:px-4 py-2.5 focus-within:border-accent/50 transition-colors">
+          <span className="text-accent text-[13px] sm:text-sm shrink-0">$ grep -r &quot;</span>
           <input
             type="text"
             value={query}
             onChange={handleChange}
             placeholder="rechercher..."
-            className="flex-1 bg-transparent text-sm text-text placeholder:text-text-dim/50 focus:outline-none"
+            className="flex-1 bg-transparent text-[13px] sm:text-sm text-text placeholder:text-text-dim/50 focus:outline-none"
           />
-          <span className="text-accent text-sm shrink-0">&quot; archives/</span>
+          <span className="text-accent text-[13px] sm:text-sm shrink-0 hidden sm:inline">&quot; archives/</span>
         </div>
         {searching && (
-          <p className="text-xs text-text-dim mt-2">
+          <p className="text-[11px] sm:text-xs text-text-dim mt-2">
             {results.length} résultat{results.length > 1 ? "s" : ""} trouvé{results.length > 1 ? "s" : ""}
           </p>
         )}
@@ -90,8 +90,8 @@ export default function ArchiveSearch({
         </div>
       ) : (
         sortedDates.map((digestDate) => (
-          <section key={digestDate} className="mb-8">
-            <h2 className="text-sm font-bold uppercase tracking-widest text-text-dim mb-4 flex items-center gap-2">
+          <section key={digestDate} className="mb-6 sm:mb-8">
+            <h2 className="text-[13px] sm:text-sm font-bold uppercase tracking-widest text-text-dim mb-3 sm:mb-4 flex items-center gap-2">
               <span className="text-accent font-mono">&gt;</span>
               Digest {digestDate}
               <span className="text-[10px] text-text-dim font-normal">
