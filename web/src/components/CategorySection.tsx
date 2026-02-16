@@ -24,8 +24,8 @@ export default function CategorySection({
   if (items.length === 0) return null;
 
   return (
-    <section className="mb-8">
-      <h2 className="text-sm font-bold uppercase tracking-widest text-text-dim mb-4 flex items-center gap-2">
+    <section className="mb-6 sm:mb-8">
+      <h2 className="text-[13px] sm:text-sm font-bold uppercase tracking-widest text-text-dim mb-3 sm:mb-4 flex items-center gap-2">
         <span className="text-accent font-mono">{CATEGORY_ICONS[category] || ">"}</span>
         {category}
         <span className="text-[10px] text-text-dim font-normal">({items.length})</span>

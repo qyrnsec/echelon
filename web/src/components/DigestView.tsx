@@ -81,14 +81,14 @@ export default function DigestView({
           &larr; Archives
         </a>
       )}
-      <div className="mb-8">
-        <div className="flex items-center justify-between">
-          <h1 className="text-lg font-bold">
+      <div className="mb-6 sm:mb-8">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-4">
+          <h1 className="text-base sm:text-lg font-bold">
             <span className="text-accent">$</span> digest —date {date}
           </h1>
           <ExportButton date={date} items={filtered} />
         </div>
-        <p className="text-xs text-text-dim mt-1">
+        <p className="text-[11px] sm:text-xs text-text-dim mt-1">
           {filtered.length === count
             ? `${count} éléments sélectionnés`
             : `${filtered.length}/${count} éléments affichés`}

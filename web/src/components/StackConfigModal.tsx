@@ -69,7 +69,7 @@ export default function StackConfigModal({
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
       <div className="absolute inset-0 bg-black/60" onClick={onClose} />
-      <div className="relative bg-bg-card border border-border rounded-lg p-6 w-full max-w-lg mx-4 max-h-[80vh] overflow-y-auto">
+      <div className="relative bg-bg-card border border-border rounded-lg p-4 sm:p-6 w-full max-w-lg mx-4 max-h-[85vh] overflow-y-auto">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-sm font-bold">
             <span className="text-accent">$</span> config --stack

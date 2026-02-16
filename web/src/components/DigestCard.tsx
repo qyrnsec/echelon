@@ -32,18 +32,18 @@ export default function DigestCard({
 
   return (
     <div
-      className={`border rounded-lg p-4 hover:border-accent/40 hover:bg-bg-hover transition-all group ${
+      className={`border rounded-lg p-3 sm:p-4 hover:border-accent/40 hover:bg-bg-hover transition-all group ${
         highlighted
           ? "border-accent/50 shadow-[inset_3px_0_0_0_var(--color-accent)] bg-accent/[0.03]"
           : "border-border"
       }`}
     >
-      <div className="flex items-start justify-between gap-3">
+      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-3">
         <a
           href={item.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sm font-medium leading-snug group-hover:text-accent transition-colors flex-1"
+          className="text-[13px] sm:text-sm font-medium leading-snug group-hover:text-accent transition-colors flex-1"
         >
           {item.title}
         </a>
@@ -54,7 +54,7 @@ export default function DigestCard({
           </span>
         </div>
       </div>
-      <div className="mt-2 flex items-center gap-4 text-xs text-text-dim">
+      <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] sm:text-xs text-text-dim">
         <span className={sourceColor}>{item.source}</span>
         {item.upvotes > 0 && <span>+{item.upvotes}</span>}
         {item.comments > 0 && <span>{item.comments} comments</span>}

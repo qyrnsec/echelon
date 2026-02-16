@@ -39,27 +39,27 @@ export default function MyDigestView() {
 
   return (
     <div>
-      <div className="mb-8">
-        <div className="flex items-center justify-between">
-          <h1 className="text-lg font-bold">
+      <div className="mb-6 sm:mb-8">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-4">
+          <h1 className="text-base sm:text-lg font-bold">
             <span className="text-accent">$</span> cat mon-digest.md
           </h1>
           {bookmarks.length > 0 && (
             <button
               onClick={handleExport}
-              className="text-xs text-text-dim hover:text-accent transition-colors border border-border rounded px-2 py-1 hover:border-accent/40 cursor-pointer"
+              className="text-[11px] sm:text-xs text-text-dim hover:text-accent transition-colors border border-border rounded px-2 py-1 hover:border-accent/40 cursor-pointer w-fit"
             >
               <span className="text-accent">$</span> export --md
             </button>
           )}
         </div>
-        <p className="text-xs text-text-dim mt-1">
+        <p className="text-[11px] sm:text-xs text-text-dim mt-1">
           {bookmarks.length} élément{bookmarks.length > 1 ? "s" : ""} sauvegardé{bookmarks.length > 1 ? "s" : ""}
         </p>
       </div>
 
       {bookmarks.length === 0 ? (
-        <div className="text-center py-16">
+        <div className="text-center py-12 sm:py-16">
           <p className="text-text-dim text-sm">
             <span className="text-accent">$</span> cat mon-digest.md
           </p>
@@ -67,8 +67,8 @@ export default function MyDigestView() {
         </div>
       ) : (
         sortedDates.map((digestDate) => (
-          <section key={digestDate} className="mb-8">
-            <h2 className="text-sm font-bold uppercase tracking-widest text-text-dim mb-4 flex items-center gap-2">
+          <section key={digestDate} className="mb-6 sm:mb-8">
+            <h2 className="text-[13px] sm:text-sm font-bold uppercase tracking-widest text-text-dim mb-3 sm:mb-4 flex items-center gap-2">
               <span className="text-accent font-mono">&gt;</span>
               Digest {digestDate}
               <span className="text-[10px] text-text-dim font-normal">
