@@ -8,6 +8,7 @@ import DigestFilters from "./DigestFilters";
 import ExportButton from "./ExportButton";
 import StackAlertBanner from "./StackAlertBanner";
 import BookmarkButton from "./BookmarkButton";
+import { ChevronLeft } from "lucide-react";
 
 const FILTERS_KEY = "echelon:filters";
 const STACK_KEY = "echelon:stack";
@@ -76,19 +77,22 @@ export default function DigestView({
       {backLink && (
         <a
           href="/archive"
-          className="text-xs text-text-dim hover:text-accent transition-colors mb-4 inline-block"
+          className="inline-flex items-center gap-1.5 text-xs text-text-dim hover:text-accent transition-colors mb-4"
         >
-          &larr; Archives
+          <ChevronLeft size={12} />
+          Archives
         </a>
       )}
       <div className="mb-6 sm:mb-8">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-4">
-          <h1 className="text-base sm:text-lg font-bold">
-            <span className="text-accent">$</span> digest —date {date}
+          <h1 className="text-base sm:text-lg font-semibold">
+            <span className="text-accent font-mono">$</span>{" "}
+            <span className="font-display">digest</span>{" "}
+            <span className="text-text-dim font-normal text-sm">—date {date}</span>
           </h1>
           <ExportButton date={date} items={filtered} />
         </div>
-        <p className="text-[11px] sm:text-xs text-text-dim mt-1">
+        <p className="text-[11px] sm:text-xs text-text-dim/60 mt-1">
           {filtered.length === count
             ? `${count} éléments sélectionnés`
             : `${filtered.length}/${count} éléments affichés`}

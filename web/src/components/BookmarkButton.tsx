@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import type { DigestItem } from "@/lib/types";
 import { isBookmarked, addBookmark, removeBookmark } from "@/lib/bookmarks";
+import { Button } from "@heroui/react";
+import { Bookmark, BookmarkCheck } from "lucide-react";
 
 export default function BookmarkButton({
   item,
@@ -17,9 +19,7 @@ export default function BookmarkButton({
     setSaved(isBookmarked(item.url));
   }, [item.url]);
 
-  const toggle = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
+  const toggle = () => {
     if (saved) {
       removeBookmark(item.url);
       setSaved(false);
@@ -30,16 +30,16 @@ export default function BookmarkButton({
   };
 
   return (
-    <button
-      onClick={toggle}
-      className={`text-[10px] px-1.5 py-0.5 rounded border transition-all cursor-pointer ${
-        saved
-          ? "border-accent/40 bg-accent/10 text-accent"
-          : "border-border text-text-dim hover:border-accent/30 hover:text-accent"
-      }`}
-      title={saved ? "Retirer de Mon Digest" : "Ajouter à Mon Digest"}
+    <Button
+      isIconOnly
+      size="sm"
+      variant={saved ? "flat" : "light"}
+      color={saved ? "primary" : "default"}
+      onPress={toggle}
+      aria-label={saved ? "Retirer de Mon Digest" : "Ajouter à Mon Digest"}
+      className="h-6 w-6 min-w-6"
     >
-      {saved ? "[*]" : "[+]"}
-    </button>
+      {saved ? <BookmarkCheck size={12} /> : <Bookmark size={12} />}
+    </Button>
   );
 }

@@ -1,7 +1,21 @@
 import type { Metadata, Viewport } from "next";
+import { Syne, Outfit } from "next/font/google";
+import Providers from "@/components/Providers";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";
+
+const syne = Syne({
+  subsets: ["latin"],
+  variable: "--font-syne",
+  display: "swap",
+});
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-outfit",
+  display: "swap",
+});
 
 const siteUrl = "https://echelon.qyrn.dev";
 
@@ -68,13 +82,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fr" className="dark">
-      <body className="min-h-screen flex flex-col">
-        <Header />
-        <main className="flex-1 mx-auto w-full max-w-5xl px-4 sm:px-6 py-6 sm:py-8">
-          {children}
-        </main>
-        <Footer />
+    <html lang="fr" className={`dark ${syne.variable} ${outfit.variable}`}>
+      <body className="min-h-screen flex flex-col font-sans">
+        <Providers>
+          <Header />
+          <main className="flex-1 mx-auto w-full max-w-5xl px-4 sm:px-6 py-6 sm:py-8">
+            {children}
+          </main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
