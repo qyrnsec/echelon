@@ -1,28 +1,33 @@
 "use client";
 
 import type { FilterState } from "@/lib/types";
+import { Chip } from "@heroui/react";
 
 const CATEGORIES = ["Vulns", "Bounty", "Tools", "Tutorials", "News"];
 const SOURCE_TYPES = ["reddit", "rss", "youtube", "podcast", "github", "nvd"];
 
-const CATEGORY_ACTIVE_STYLES: Record<string, string> = {
-  Vulns: "bg-red/20 border-red text-red",
-  Tools: "bg-accent/20 border-accent text-accent",
-  Tutorials: "bg-purple/20 border-purple text-purple",
-  Bounty: "bg-orange/20 border-orange text-orange",
-  News: "bg-cyan/20 border-cyan text-cyan",
+const CATEGORY_CHIP_COLORS: Record<
+  string,
+  "danger" | "success" | "secondary" | "warning" | "primary" | "default"
+> = {
+  Vulns: "danger",
+  Tools: "primary",
+  Tutorials: "secondary",
+  Bounty: "warning",
+  News: "default",
 };
 
-const SOURCE_ACTIVE_STYLES: Record<string, string> = {
-  reddit: "bg-orange/20 border-orange text-orange",
-  rss: "bg-cyan/20 border-cyan text-cyan",
-  youtube: "bg-red/20 border-red text-red",
-  podcast: "bg-purple/20 border-purple text-purple",
-  github: "bg-accent/20 border-accent text-accent",
-  nvd: "bg-orange/20 border-orange text-orange",
+const SOURCE_CHIP_COLORS: Record<
+  string,
+  "danger" | "success" | "secondary" | "warning" | "primary" | "default"
+> = {
+  reddit: "warning",
+  rss: "default",
+  youtube: "danger",
+  podcast: "secondary",
+  github: "primary",
+  nvd: "warning",
 };
-
-const INACTIVE_STYLE = "border-border text-text-dim hover:border-accent/30";
 
 export default function DigestFilters({
   filters,
@@ -47,35 +52,51 @@ export default function DigestFilters({
 
   return (
     <div className="mb-6 space-y-3">
-      <div className="flex flex-wrap gap-2">
-        <span className="text-[10px] text-text-dim uppercase tracking-widest mr-1 self-center">cat</span>
+      <div className="flex flex-wrap items-center gap-2">
+        <span className="text-[10px] text-text-dim/60 uppercase tracking-widest w-6 shrink-0">
+          cat
+        </span>
         {CATEGORIES.map((cat) => {
           const active = filters.categories.includes(cat);
-          const style = active ? CATEGORY_ACTIVE_STYLES[cat] : INACTIVE_STYLE;
           return (
-            <button
+            <Chip
               key={cat}
+              size="sm"
+              variant={active ? "solid" : "bordered"}
+              color={CATEGORY_CHIP_COLORS[cat] || "default"}
               onClick={() => toggleCategory(cat)}
-              className={`text-[11px] px-2.5 py-1 rounded border transition-all cursor-pointer ${style}`}
+              className="cursor-pointer"
+              classNames={{
+                base: "h-6",
+                content: "text-[11px] font-medium",
+              }}
             >
               {cat}
-            </button>
+            </Chip>
           );
         })}
       </div>
-      <div className="flex flex-wrap gap-2">
-        <span className="text-[10px] text-text-dim uppercase tracking-widest mr-1 self-center">src</span>
+      <div className="flex flex-wrap items-center gap-2">
+        <span className="text-[10px] text-text-dim/60 uppercase tracking-widest w-6 shrink-0">
+          src
+        </span>
         {SOURCE_TYPES.map((src) => {
           const active = filters.sourceTypes.includes(src);
-          const style = active ? SOURCE_ACTIVE_STYLES[src] : INACTIVE_STYLE;
           return (
-            <button
+            <Chip
               key={src}
+              size="sm"
+              variant={active ? "solid" : "bordered"}
+              color={SOURCE_CHIP_COLORS[src] || "default"}
               onClick={() => toggleSource(src)}
-              className={`text-[11px] px-2.5 py-1 rounded border transition-all cursor-pointer ${style}`}
+              className="cursor-pointer"
+              classNames={{
+                base: "h-6",
+                content: "text-[11px] font-medium",
+              }}
             >
               {src}
-            </button>
+            </Chip>
           );
         })}
       </div>

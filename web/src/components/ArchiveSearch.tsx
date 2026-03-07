@@ -2,6 +2,8 @@
 
 import { useState, useRef, useCallback } from "react";
 import type { Digest, DigestItem } from "@/lib/types";
+import { Input } from "@heroui/react";
+import { Search } from "lucide-react";
 import ArchiveList from "./ArchiveList";
 import DigestCard from "./DigestCard";
 
@@ -47,8 +49,7 @@ export default function ArchiveSearch({
     [digests]
   );
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value;
+  const handleChange = (value: string) => {
     setQuery(value);
     if (timerRef.current) clearTimeout(timerRef.current);
     timerRef.current = setTimeout(() => search(value), 200);
@@ -64,17 +65,19 @@ export default function ArchiveSearch({
   return (
     <div>
       <div className="mb-4 sm:mb-6">
-        <div className="flex flex-col sm:flex-row sm:items-center gap-2 border border-border rounded-lg px-3 sm:px-4 py-2.5 focus-within:border-accent/50 transition-colors">
-          <span className="text-accent text-[13px] sm:text-sm shrink-0">$ grep -r &quot;</span>
-          <input
-            type="text"
-            value={query}
-            onChange={handleChange}
-            placeholder="rechercher..."
-            className="flex-1 bg-transparent text-[13px] sm:text-sm text-text placeholder:text-text-dim/50 focus:outline-none"
-          />
-          <span className="text-accent text-[13px] sm:text-sm shrink-0 hidden sm:inline">&quot; archives/</span>
-        </div>
+        <Input
+          value={query}
+          onValueChange={handleChange}
+          placeholder="Rechercher dans les archives..."
+          size="md"
+          variant="bordered"
+          startContent={<Search size={14} className="text-text-dim/60 shrink-0" />}
+          classNames={{
+            input: "text-sm text-text placeholder:text-text-dim/40",
+            inputWrapper:
+              "border-[#1e1e2e] hover:border-accent/40 focus-within:!border-accent/60 bg-bg-card",
+          }}
+        />
         {searching && (
           <p className="text-[11px] sm:text-xs text-text-dim mt-2">
             {results.length} résultat{results.length > 1 ? "s" : ""} trouvé{results.length > 1 ? "s" : ""}
@@ -91,10 +94,10 @@ export default function ArchiveSearch({
       ) : (
         sortedDates.map((digestDate) => (
           <section key={digestDate} className="mb-6 sm:mb-8">
-            <h2 className="text-[13px] sm:text-sm font-bold uppercase tracking-widest text-text-dim mb-3 sm:mb-4 flex items-center gap-2">
+            <h2 className="text-[13px] sm:text-sm font-semibold uppercase tracking-widest text-text-dim mb-3 sm:mb-4 flex items-center gap-2">
               <span className="text-accent font-mono">&gt;</span>
               Digest {digestDate}
-              <span className="text-[10px] text-text-dim font-normal">
+              <span className="text-[10px] text-text-dim/50 font-normal">
                 ({grouped[digestDate].length})
               </span>
             </h2>

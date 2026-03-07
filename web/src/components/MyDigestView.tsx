@@ -5,6 +5,8 @@ import type { BookmarkedItem } from "@/lib/types";
 import { getBookmarks, removeBookmark } from "@/lib/bookmarks";
 import { generateDigestMarkdown, downloadMarkdown } from "@/lib/markdown";
 import DigestCard from "./DigestCard";
+import { Button } from "@heroui/react";
+import { Download, Trash2 } from "lucide-react";
 
 export default function MyDigestView() {
   const [bookmarks, setBookmarks] = useState<BookmarkedItem[]>([]);
@@ -41,37 +43,42 @@ export default function MyDigestView() {
     <div>
       <div className="mb-6 sm:mb-8">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-4">
-          <h1 className="text-base sm:text-lg font-bold">
-            <span className="text-accent">$</span> cat mon-digest.md
+          <h1 className="text-base sm:text-lg font-semibold">
+            <span className="text-accent font-mono">$</span>{" "}
+            <span className="font-display">mon-digest</span>
           </h1>
           {bookmarks.length > 0 && (
-            <button
-              onClick={handleExport}
-              className="text-[11px] sm:text-xs text-text-dim hover:text-accent transition-colors border border-border rounded px-2 py-1 hover:border-accent/40 cursor-pointer w-fit"
+            <Button
+              size="sm"
+              variant="bordered"
+              color="default"
+              startContent={<Download size={13} />}
+              onPress={handleExport}
+              className="border-[#1e1e2e] text-text-dim hover:border-accent/40 hover:text-accent h-7 text-[11px]"
             >
-              <span className="text-accent">$</span> export --md
-            </button>
+              Export .md
+            </Button>
           )}
         </div>
-        <p className="text-[11px] sm:text-xs text-text-dim mt-1">
+        <p className="text-[11px] sm:text-xs text-text-dim/60 mt-1">
           {bookmarks.length} élément{bookmarks.length > 1 ? "s" : ""} sauvegardé{bookmarks.length > 1 ? "s" : ""}
         </p>
       </div>
 
       {bookmarks.length === 0 ? (
         <div className="text-center py-12 sm:py-16">
-          <p className="text-text-dim text-sm">
-            <span className="text-accent">$</span> cat mon-digest.md
+          <p className="text-text-dim text-sm">Aucun élément sauvegardé.</p>
+          <p className="text-text-dim/50 text-xs mt-1">
+            Utilisez l&apos;icône marque-page sur les articles pour les ajouter ici.
           </p>
-          <p className="text-text-dim text-sm mt-1">Aucun élément sauvegardé.</p>
         </div>
       ) : (
         sortedDates.map((digestDate) => (
           <section key={digestDate} className="mb-6 sm:mb-8">
-            <h2 className="text-[13px] sm:text-sm font-bold uppercase tracking-widest text-text-dim mb-3 sm:mb-4 flex items-center gap-2">
+            <h2 className="text-[13px] sm:text-sm font-semibold uppercase tracking-widest text-text-dim mb-3 sm:mb-4 flex items-center gap-2">
               <span className="text-accent font-mono">&gt;</span>
               Digest {digestDate}
-              <span className="text-[10px] text-text-dim font-normal">
+              <span className="text-[10px] text-text-dim/50 font-normal">
                 ({grouped[digestDate].length})
               </span>
             </h2>
@@ -81,17 +88,17 @@ export default function MyDigestView() {
                   key={`${item.url}-${i}`}
                   item={item}
                   actions={
-                    <button
-                      onClick={(e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        handleRemove(item.url);
-                      }}
-                      className="text-[10px] px-1.5 py-0.5 rounded border border-red/40 bg-red/10 text-red hover:bg-red/20 transition-all cursor-pointer"
-                      title="Retirer de Mon Digest"
+                    <Button
+                      isIconOnly
+                      size="sm"
+                      variant="flat"
+                      color="danger"
+                      onPress={() => handleRemove(item.url)}
+                      aria-label="Retirer de Mon Digest"
+                      className="h-6 w-6 min-w-6"
                     >
-                      [-]
-                    </button>
+                      <Trash2 size={11} />
+                    </Button>
                   }
                 />
               ))}
