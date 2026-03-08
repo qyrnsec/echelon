@@ -1,18 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import type { StackConfig } from "@/lib/types";
 import { getStorageItem, setStorageItem } from "@/lib/storage";
-import {
-  Modal,
-  ModalContent,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
-  Button,
-  Input,
-  Chip,
-} from "@heroui/react";
+import { Button, Input, Chip } from "@heroui/react";
 import { Plus, X } from "lucide-react";
 
 const STORAGE_KEY = "echelon:stack";
@@ -36,13 +27,24 @@ export default function StackConfigModal({
 }) {
   const [keywords, setKeywords] = useState<string[]>([]);
   const [input, setInput] = useState("");
+  const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     if (open) {
       const saved = getStorageItem<StackConfig>(STORAGE_KEY);
       if (saved) setKeywords(saved.keywords);
+      setTimeout(() => inputRef.current?.focus(), 50);
     }
   }, [open]);
+
+  useEffect(() => {
+    if (!open) return;
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    document.addEventListener("keydown", handleKey);
+    return () => document.removeEventListener("keydown", handleKey);
+  }, [open, onClose]);
 
   const addKeyword = (kw: string) => {
     const trimmed = kw.trim().toLowerCase();
@@ -73,104 +75,99 @@ export default function StackConfigModal({
     (s) => !keywords.includes(s.toLowerCase())
   );
 
+  if (!open) return null;
+
   return (
-    <Modal
-      isOpen={open}
-      onClose={onClose}
-      size="lg"
-      classNames={{
-        base: "bg-bg-card border border-[#1e1e2e]",
-        header: "border-b border-[#1e1e2e] pb-3",
-        footer: "border-t border-[#1e1e2e] pt-3",
-      }}
-    >
-      <ModalContent>
-        <ModalHeader className="flex flex-col gap-1">
-          <h2 className="text-sm font-semibold text-text">
-            Configuration stack
-          </h2>
-          <p className="text-xs text-text-dim font-normal">
-            Définissez les technologies de votre stack pour mettre en surbrillance les articles pertinents.
-          </p>
-        </ModalHeader>
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+      <div
+        className="absolute inset-0"
+        style={{ background: "rgba(0,0,0,0.65)" }}
+        onClick={onClose}
+      />
+      <div
+        className="relative w-full max-w-lg rounded-xl border border-[#1e1e2e] p-5 max-h-[85vh] overflow-y-auto flex flex-col gap-4"
+        style={{ background: "#111118" }}
+      >
+        <div className="flex items-start justify-between gap-3">
+          <div>
+            <h2 className="text-sm font-semibold text-text">Configuration stack</h2>
+            <p className="text-xs text-text-dim mt-0.5">
+              Définissez les technologies de votre stack pour mettre en surbrillance les articles pertinents.
+            </p>
+          </div>
+          <button
+            onClick={onClose}
+            className="text-text-dim hover:text-accent transition-colors cursor-pointer shrink-0 mt-0.5"
+          >
+            <X size={16} />
+          </button>
+        </div>
 
-        <ModalBody className="py-4 gap-4">
-          <Input
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            onKeyDown={handleKeyDown}
-            placeholder="Ajouter un mot-clé..."
-            size="sm"
-            variant="bordered"
-            endContent={
-              <button
-                onClick={() => addKeyword(input)}
-                className="text-text-dim hover:text-accent transition-colors cursor-pointer"
+        <Input
+          ref={inputRef}
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          onKeyDown={handleKeyDown}
+          placeholder="Ajouter un mot-clé..."
+          size="sm"
+          variant="bordered"
+          endContent={
+            <button
+              onClick={() => addKeyword(input)}
+              className="text-text-dim hover:text-accent transition-colors cursor-pointer"
+            >
+              <Plus size={14} />
+            </button>
+          }
+          classNames={{
+            input: "text-sm placeholder:text-[#6b6b80]/50",
+            inputWrapper: "border-[#1e1e2e] hover:border-[#7c3aed]/40 focus-within:!border-[#7c3aed]/60 bg-[#0a0a0f]",
+          }}
+        />
+
+        {keywords.length > 0 && (
+          <div className="flex flex-wrap gap-2">
+            {keywords.map((kw) => (
+              <Chip
+                key={kw}
+                size="sm"
+                variant="flat"
+                color="primary"
+                endContent={
+                  <button
+                    onClick={() => removeKeyword(kw)}
+                    className="hover:opacity-70 transition-opacity cursor-pointer ml-0.5"
+                  >
+                    <X size={10} />
+                  </button>
+                }
               >
-                <Plus size={14} />
-              </button>
-            }
-            classNames={{
-              input: "text-sm text-text placeholder:text-text-dim/40",
-              inputWrapper:
-                "border-[#1e1e2e] hover:border-accent/40 focus-within:!border-accent/60 bg-bg",
-            }}
-          />
+                {kw}
+              </Chip>
+            ))}
+          </div>
+        )}
 
-          {keywords.length > 0 && (
-            <div className="flex flex-wrap gap-2">
-              {keywords.map((kw) => (
-                <Chip
-                  key={kw}
-                  size="sm"
-                  variant="flat"
-                  color="primary"
-                  endContent={
-                    <button
-                      onClick={() => removeKeyword(kw)}
-                      className="hover:text-white/80 transition-colors cursor-pointer ml-0.5"
-                    >
-                      <X size={10} />
-                    </button>
-                  }
-                  classNames={{
-                    content: "text-[11px] pr-0",
-                  }}
+        {availableSuggestions.length > 0 && (
+          <div>
+            <p className="text-[10px] text-text-dim/60 uppercase tracking-widest mb-2">
+              Suggestions
+            </p>
+            <div className="flex flex-wrap gap-1.5">
+              {availableSuggestions.map((s) => (
+                <button
+                  key={s}
+                  onClick={() => addKeyword(s)}
+                  className="text-[10px] px-2 py-0.5 rounded-md border border-[#1e1e2e] text-text-dim hover:border-[#7c3aed]/40 hover:text-accent transition-all cursor-pointer"
                 >
-                  {kw}
-                </Chip>
+                  {s}
+                </button>
               ))}
             </div>
-          )}
+          </div>
+        )}
 
-          {availableSuggestions.length > 0 && (
-            <div>
-              <p className="text-[10px] text-text-dim/60 uppercase tracking-widest mb-2">
-                Suggestions
-              </p>
-              <div className="flex flex-wrap gap-1.5">
-                {availableSuggestions.map((s) => (
-                  <Chip
-                    key={s}
-                    size="sm"
-                    variant="bordered"
-                    color="default"
-                    onClick={() => addKeyword(s)}
-                    className="cursor-pointer hover:border-accent/40 hover:text-accent transition-all"
-                    classNames={{
-                      base: "border-[#1e1e2e] h-5",
-                      content: "text-[10px] text-text-dim",
-                    }}
-                  >
-                    {s}
-                  </Chip>
-                ))}
-              </div>
-            </div>
-          )}
-        </ModalBody>
-
-        <ModalFooter className="gap-2">
+        <div className="flex justify-end gap-2 pt-1 border-t border-[#1e1e2e]">
           <Button
             size="sm"
             variant="light"
@@ -188,8 +185,8 @@ export default function StackConfigModal({
           >
             Sauvegarder
           </Button>
-        </ModalFooter>
-      </ModalContent>
-    </Modal>
+        </div>
+      </div>
+    </div>
   );
 }
