@@ -3,17 +3,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  Navbar,
-  NavbarBrand,
-  NavbarContent,
-  NavbarItem,
-  NavbarMenuToggle,
-  NavbarMenu,
-  NavbarMenuItem,
-  Button,
-} from "@heroui/react";
-import { Settings } from "lucide-react";
+import { Button } from "@heroui/react";
+import { Settings, Menu, X } from "lucide-react";
 import StackConfigModal from "./StackConfigModal";
 
 const navLinks = [
@@ -28,48 +19,34 @@ export default function Header() {
 
   return (
     <>
-      <Navbar
-        isMenuOpen={menuOpen}
-        onMenuOpenChange={setMenuOpen}
-        className="bg-bg/80 backdrop-blur-md border-b border-[#1e1e2e]"
-        maxWidth="xl"
-      >
-        <NavbarContent>
-          <NavbarMenuToggle
-            aria-label={menuOpen ? "Fermer le menu" : "Ouvrir le menu"}
-            className="sm:hidden text-text-dim"
-          />
-          <NavbarBrand>
-            <Link href="/" className="flex items-center gap-2.5 group">
-              <Image
-                src="/logo.png"
-                alt="Échelon"
-                width={32}
-                height={32}
-                className="rounded"
-              />
-              <span className="font-display font-bold text-lg tracking-wider text-accent group-hover:text-accent-dim transition-colors">
-                ÉCHELON
-              </span>
-            </Link>
-          </NavbarBrand>
-        </NavbarContent>
+      <header className="sticky top-0 z-40 border-b border-[#1e1e2e]" style={{ background: "#0a0a0f" }}>
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 h-14 flex items-center justify-between gap-4">
+          <Link href="/" className="flex items-center gap-2.5 group shrink-0">
+            <Image
+              src="/logo.png"
+              alt="Échelon"
+              width={28}
+              height={28}
+              className="rounded"
+            />
+            <span className="font-display font-bold text-base tracking-wider text-accent group-hover:text-accent-dim transition-colors">
+              ÉCHELON
+            </span>
+          </Link>
 
-        <NavbarContent className="hidden sm:flex gap-6" justify="center">
-          {navLinks.map((link) => (
-            <NavbarItem key={link.href}>
+          <nav className="hidden md:flex items-center gap-6">
+            {navLinks.map((link) => (
               <Link
+                key={link.href}
                 href={link.href}
-                className="text-sm text-text-dim hover:text-accent transition-colors"
+                className="text-sm text-text-dim hover:text-text transition-colors"
               >
                 {link.label}
               </Link>
-            </NavbarItem>
-          ))}
-        </NavbarContent>
+            ))}
+          </nav>
 
-        <NavbarContent justify="end">
-          <NavbarItem>
+          <div className="flex items-center gap-2">
             <Button
               isIconOnly
               variant="light"
@@ -80,35 +57,44 @@ export default function Header() {
             >
               <Settings size={16} />
             </Button>
-          </NavbarItem>
-        </NavbarContent>
 
-        <NavbarMenu className="bg-bg-card/95 backdrop-blur-md pt-4">
-          {navLinks.map((link) => (
-            <NavbarMenuItem key={link.href}>
-              <Link
-                href={link.href}
-                onClick={() => setMenuOpen(false)}
-                className="block py-2 text-sm text-text-dim hover:text-accent transition-colors w-full"
-              >
-                {link.label}
-              </Link>
-            </NavbarMenuItem>
-          ))}
-          <NavbarMenuItem>
             <button
-              onClick={() => {
-                setMenuOpen(false);
-                setStackOpen(true);
-              }}
-              className="flex items-center gap-2 py-2 text-sm text-text-dim hover:text-accent transition-colors w-full cursor-pointer"
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="md:hidden p-1.5 text-text-dim hover:text-accent transition-colors cursor-pointer"
+              aria-label={menuOpen ? "Fermer le menu" : "Ouvrir le menu"}
             >
-              <Settings size={14} />
-              Configuration stack
+              {menuOpen ? <X size={18} /> : <Menu size={18} />}
             </button>
-          </NavbarMenuItem>
-        </NavbarMenu>
-      </Navbar>
+          </div>
+        </div>
+
+        {menuOpen && (
+          <nav className="md:hidden border-t border-[#1e1e2e]" style={{ background: "#111118" }}>
+            <div className="mx-auto max-w-5xl px-4 py-3 space-y-1">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMenuOpen(false)}
+                  className="block py-2 text-sm text-text-dim hover:text-accent transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <button
+                onClick={() => {
+                  setMenuOpen(false);
+                  setStackOpen(true);
+                }}
+                className="flex items-center gap-2 py-2 text-sm text-text-dim hover:text-accent transition-colors w-full cursor-pointer"
+              >
+                <Settings size={14} />
+                Configuration stack
+              </button>
+            </div>
+          </nav>
+        )}
+      </header>
 
       <StackConfigModal
         open={stackOpen}
